@@ -2,3 +2,43 @@
     padding: 0;
     margin: 0;
   }
+
+  header{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 10vh;
+    align-items: center;
+  
+  }
+
+  #img-nav{
+    width: 25vh;
+  }
+
+  header a{
+    text-decoration: none;
+    color: black;
+  }
+
+  button{
+    border-radius: 10px;
+    padding: 3px;
+    background-color: black;
+    color: white;
+  }
+
+  footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  footer img{
+    width: 1vw;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: black;
+  }
