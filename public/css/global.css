@@ -1,7 +1,10 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
   }
+
+  
 
   header{
     display: flex;
@@ -24,21 +27,64 @@
   button{
     border-radius: 10px;
     padding: 3px;
-    background-color: black;
+    background-color: #7728ab;
     color: white;
   }
 
   footer{
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;
+    flex-direction: row;    
+    padding: 40px;
+    background-color: #8bc9df;
   }
 
   footer img{
-    width: 1vw;
+    width: 2vw;
   }
 
   footer a{
     text-decoration: none;
     color: black;
+  }
+
+  footer p{
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #logofooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .div-footer {
+    width: 260px;
+    margin-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 4px;    
+    padding: 30px;
+    color: #7728ab;
+  }
+
+  #div-footer-1 {
+    color: white;
+    background-color: #7728ab;
+  }
+
+  #div-footer-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  li {
+    list-style-type: none;
+  }
+  
+  #cartoes {
+    width: 25vw;
   }
