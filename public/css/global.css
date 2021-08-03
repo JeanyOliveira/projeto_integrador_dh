@@ -3,8 +3,6 @@
   margin: 0;  
 }
 
-html, body {height:100%;}
-
 a {
   text-decoration: none;
   color: #fff;
@@ -50,11 +48,6 @@ header input {
   border-radius: 14px;
   border: 4px solid #8BC0DF;
   color: #fff;
-}
-
-.button-header2:hover{
-    transition: 1s;
-    color: black;
 }
 
 #logo {

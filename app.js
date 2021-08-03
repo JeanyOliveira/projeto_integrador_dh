@@ -23,6 +23,10 @@ app.get("/produtos", (req, res) => {
     res.sendFile(__dirname + "/views/listagem-de-produtos.html");
 });
 
+app.get("/quemsomos", (req, res) => {
+    res.sendFile(__dirname + "/views/quem-somos.html");
+});
+
 app.get("/login", (req, res) => {
     res.sendFile(__dirname + "/views/login-cadastro.html");
 });
