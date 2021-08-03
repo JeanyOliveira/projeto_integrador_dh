@@ -5,92 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css"/>
+    <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <title>Home | PET IS LIFE</title>
 </head>
+
 <body>
     <!-- PADRÃO -->
     <header>
-        <img src="/img/logo.png" alt="logo" href="#" id="img-nav">
-        <div id="caixaPesquisar">
-            <input type="text" id="search">
-            <button>Pesquisar</button>
-        </div>
-        <a href="">Assine</a>
-        <a href="">Pedidos</a>
-        <a href="">Carrinho</a>
-        <a href=""><button>Cadastro</button></a>
+        <section class="header1">
+            <a href="">
+                <img id="logo" src="/img/logo1.png" alt="logo1">
+            </a>
+            <div class="buscar">
+                <input type="text">
+                <a href="">
+                    <buttont class="button-header1">Buscar</buttont>
+                </a>
+            </div>
+            <a href="">
+                <buttont class="button-header2">Login / Cadastro</buttont>
+            </a>
+            <a href="">
+                <img id="carrinho" src="/img/Icone-Carrinho.png" alt="carrinho">
+            </a>
+        </section>
+        <section class="header2">
+            <a href="">Cachorros</a>
+            <a href="">Gatos</a>
+            <a href="">Peixes</a>
+            <a href="">Pássaros</a>
+            <a href="">Outros Pets</a>
+            <a href="">Promoções</a>
+        </section>
     </header>
     <!-- PADRÃO -->
+
     <main>
-        <img src="/img/fundo-dog.jpeg"/>
+
+        <div id="slide">
+            <img class="seta-esquerda" src="/img/seta-esquerda.png">
+            <img src="/img/slide-01.png">
+            <img class="seta-direita" src="/img/seta-direita.png">
+        </div>
+
+
     </main>
+
+    <div class="cards">
+        <img src="/img/arquivos-psd/cards/card-01.png" id="card-01">
+        <img src="/img/arquivos-psd/cards/card-02.png" id="card-02">
+        <img src="/img/arquivos-psd/cards/card-03.png" id="card-03">
+        
+    </div>
+
+    
+
     <!-- PADRÃO -->
     <footer>
         <div>
-            <h3>
-                Como podemos ajudar você?
-            </h3>
-            <small>
-                Conheça mais sobre nossa empresa, políticas e tenha o melhor atendimento do mercado pet
-            </small>
+            <h1>Como podemos ajudar você?</h1>
+            <small>Conheça mais sobre nossa empresa,<br> políticas e tenha o melhor<br> atendimento do mercado pet</small>
         </div>
         <div>
-            <h4>
-                Atendimento
-            </h4>
-            <a href="">
-                Central de atendimento
-            </a>
-            <!-- borda -->
-            <a href="">sac@petlove.com.br</a>
+            <p>Atendimento:</p>
+            <a id="sac" href="">sac@petlove.com.br</a>
         </div>
         <div>
-            <h4>
-                Onde estamos
-            </h4>
-            <div id="logoFooter">
-                <a href="">
-                    <img src="/img/facebook.png" alt="facebook">
-                </a>
-                <a href="">
-                    <img src="/img/instagram.png" alt="instagram">
-                </a>
-                <a href="">
-                    <img src="/img/twitter.png" alt="twitter">
-                </a>
-                <a href="">
-                    <img src="/img/youtube.png" alt="youtube">
-                </a>
-            </div>
-            <div>
-            <h4>
-                Baixe o app
-            </h4>
+            <p>Onde estamos:</p>
             <div>
                 <a href="">
-                    <img src="/img/app-store.png" alt="app-store">
+                    <img class="footer-img" src="/img/facebook.png" alt="facebook">
                 </a>
                 <a href="">
-                    <img src="/img/google-play.png" alt="google-play">
+                    <img class="footer-img" src="/img/instagram.png" alt="instagram">
+                </a>
+                <a href="">
+                    <img class="footer-img" src="/img/twitter.png" alt="twitter">
+                </a>
+                <a href="">
+                    <img class="footer-img" src="/img/youtube.png" alt="youtube">
                 </a>
             </div>
-            <div>
-                <h4>
-                    Políticas
-                </h4>
-                <a href="">Aviso de privacidade</a>
-                <a href="">Política de Cookies</a>
-                <a href="">Política de entrega e devolução</a>
+            <p>Baixe o App:</p>
+            <div>                
+                <div>
+                    <a href="">
+                        <img class="footer-img" src="/img/app-store.png" alt="app-store">
+                    </a>
+                    <a href="">
+                        <img class="footer-img" src="/img/google-play.png" alt="google-play">
+                    </a>
+                </div>
             </div>
-                <a href="">Política de compra</a>
-                <a href="">Política de white hat</a>
-        </div>
-        <div>
-        <img src="/img/cartoes.webp" alt="cartoes">
-        </div>
+        </div>               
     </footer>
+        <section id="last-item">
+            <a href="">Aviso de Privacidade</a>
+            <a href="">Política de Compra, Entrega e Devolução.</a>
+            <img id="cards" src="/img/cartoes.webp" alt="cartoes">
+        </section>
     <!-- PADRÃO -->
 </body>
+
 </html>

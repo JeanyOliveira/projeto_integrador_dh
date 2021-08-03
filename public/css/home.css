@@ -3,6 +3,54 @@
     margin: 0;
   }
 
-  main img{
-    width: 100vw;
+  main{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #slide{
+    position: relative;
+    cursor: pointer;
+  }
+
+  .seta-esquerda{
+    margin-bottom: 120px;
+    margin-right: 100px;
+  }
+
+  .seta-direita{
+    margin-bottom: 120px;
+    margin-left: 100px;
+  }
+
+  .cards{
+    margin-top: 20px;
+    display: flex;
+    justify-content:center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  #card-01{
+    margin-right: 90px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  #card-01:hover{
+    transition: .9s;
+    transform: scale(1.1);
+  }
+  
+  #card-02{
+    margin-right: 90px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  #card-03{
+    margin-left: 20px;
+    cursor: pointer;
   }
