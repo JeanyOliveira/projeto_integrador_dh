@@ -8,6 +8,7 @@
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: 1s;
   }
 
   #slide{
@@ -16,13 +17,15 @@
   }
 
   .seta-esquerda{
-    margin-bottom: 120px;
-    margin-right: 100px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 225px;
   }
 
   .seta-direita{
-    margin-bottom: 120px;
-    margin-left: 100px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 225px;
   }
 
   .conteiner-cards{
@@ -31,6 +34,13 @@
     align-items: center;
     margin-left: 60px;
     flex-wrap: wrap;
+  }
+  .cards:hover{
+    background-color: #7728ab;
+  }
+
+  .btnCard:hover{
+    background-color: black;
   }
 
   .cards{
@@ -43,7 +53,11 @@
     margin-top: 40px;
     margin-right: 70px;
     flex-wrap: wrap;
+    transition: 1s;
+    border-radius: 20px;
   }
+
+  
 
   .imgProdutos{
     width: 200px;
@@ -87,13 +101,33 @@
     color: white;
   }
   #marcasParceiras{
+    display: flex;
+    justify-content: center;
   }
 
-  #marcasLinha1{
+  .marcasLinha1{
     display: flex;
     justify-content: center;
     padding: 50px black;
+  }
+
+  #tituloMarca{
+    margin-left: 480px;
+    margin-bottom: 50px;
+  }
+
+  .marcasLinha1 img{
+    border:4px solid #999;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: 1s;
+  }
+
+  .marcasLinha1 img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 
   }
+
 
   
