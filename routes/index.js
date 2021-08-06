@@ -23,6 +23,4 @@ routes.get("/quemsomos", (req, res) => {
     res.render('quemsomos');
 });
 
-
-
 module.exports = routes;
