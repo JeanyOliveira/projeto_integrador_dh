@@ -11,25 +11,69 @@
     <title>Home | PET IS LIFE</title>
 </head>
 
-<body>    
-    <%- include('components/header') %>   
-        <main>
+<body>
+    <%- include('components/header') %>
+    <main>
 
-            <div id="slide">
-                <img class="seta-esquerda" src="/img/seta-esquerda.png">
-                <img src="/img/slide-01.png">
-                <img class="seta-direita" src="/img/seta-direita.png">
-            </div>
-    
-        </main>
-    
-        <div class="cards">
-            <img src="/img/arquivos-psd/cards/card-01.png" id="card-01">
-            <img src="/img/arquivos-psd/cards/card-02.png" id="card-02">
-            <img src="/img/arquivos-psd/cards/card-03.png" id="card-03">
-            
+        <div id="slide">
+            <img class="seta-esquerda" src="/img/seta-esquerda.png">
+            <img src="https://via.placeholder.com/1790x520">
+            <img class="seta-direita" src="/img/seta-direita.png">
         </div>
-    </main>    
+
+    </main>
+
+    <div class="conteiner-cards">
+        <div class="cards">
+            <img src="/img/Casaco_joaninha_-1-.webp" class="imgProdutos" alt="caminha print">
+            <div>
+                <h1 id="tituloCard">Casaco Joaninha</h1>
+                <h3 id="precoCard">R$ 107,50</h2id>
+                </h3>
+                <h1 id="precoReal">R$ 75,20</h1>
+                <button id="btnCard">Comprar</button>
+            </div>
+
+        </div>
+
+        <div class="cards">
+            <img src="/img/Manta.jpg" class="imgProdutos" alt="Manta">
+            <div>
+                <h1 id="tituloCard">Manta Polar</h1>
+                <h3 id="precoCard">R$ 59,90</h2id>
+                </h3>
+                <h1 id="precoReal">R$ 39,90</h1>
+                <button id="btnCard">Comprar</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <img src="/img/Banho-a-Seco-Beeps-200ml-3862436.webp" class="imgProdutos" alt="caminha print">
+            <div>
+                <h1 id="tituloCard">Banho a seco 200ml</h1>
+                <h3 id="precoCard">R$ 36,90</h2id>
+                </h3>
+                <h1 id="precoReal">R$ 33,20</h1>
+                <button id="btnCard">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="marcasParceiras"> 
+        <div id="marcasLinha1">
+            <div>
+            <img src="/img/marcasParceiras/imagem-marca-bayer-pet-bayer.jpg" alt="Bayer Logo">
+            </div>
+            <img src="/img/marcasParceiras/imagem-marca-ferplast-ferplast.jpg" alt="Ferplast">
+            <img src="/img/marcasParceiras/imagem-marca-frontline-frontiline_plus.jpg" alt="">
+            <img src="img/marcasParceiras/imagem-marca-jambo-pet-jambo_pet.jpg" alt="">
+            <img src="/img/marcasParceiras/imagem-marca-pedigree-pedigree.jpg" alt="">
+            <img src="/img/marcasParceiras/imagem-marca-pet-society-pet_society.jpg" alt="">
+        </div>
+    </div>
+
+
+    </main>
     <%- include('components/footer') %>
 </body>
 

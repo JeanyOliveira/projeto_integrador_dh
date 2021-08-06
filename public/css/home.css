@@ -25,31 +25,75 @@
     margin-left: 100px;
   }
 
+  .conteiner-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+    flex-wrap: wrap;
+  }
+
   .cards{
     display: flex;
-    justify-content:center;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background-color: #8BC0DF ;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-right: 70px;
+    flex-wrap: wrap;
   }
 
-  #card-01{
-    margin-right: 90px;
-    margin-left: 5px;
-    cursor: pointer;
+  .imgProdutos{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
   }
 
-  #card-01:hover{
-    transition: .9s;
-    transform: scale(1.1);
+  #tituloCard{
+    position: absolute;
+    margin-top: 230px;
+    margin-left: -220px;
+    color: white;
+    flex-wrap: wrap;
   }
+
+  #precoCard{
+    position: absolute;
+    margin-top: 270px;
+    margin-left: -150px;
+    color: white;
+    text-decoration: line-through;
+    flex-wrap: wrap;
+  }
+
+  #precoReal{
+    position: inherit;
+    margin-top: 300px;
+    margin-left: -170px;
+    color: white;
+    flex-wrap: wrap;
+
+  }
+
+  #btnCard{
+    position: inherit;
+    background-color: #7728ab;
+    margin-top: 10px;
+    margin-left: -140px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+  }
+  #marcasParceiras{
+  }
+
+  #marcasLinha1{
+    display: flex;
+    justify-content: center;
+    padding: 50px black;
+
+  }
+
   
-  #card-02{
-    margin-right: 90px;
-    margin-left: 5px;
-    cursor: pointer;
-  }
-
-  #card-03{
-    margin-left: 20px;
-    cursor: pointer;
-  }
