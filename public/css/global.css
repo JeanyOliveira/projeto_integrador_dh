@@ -34,15 +34,15 @@ header input {
   gap: 15px;
 }
 
-.button-header1 {
-  background-color: #8BC0DF;
+#button-header1 {
+  background-color: #7728ab;
   padding: 15px 30px;
   border-radius: 14px;
   border: 4px;
   color: #fff;
 }
 
-.button-header2 {
+#button-header2 {
   background-color: #7728ab;
   padding: 11px 40px;
   border-radius: 14px;
@@ -65,11 +65,7 @@ header input {
   padding: 20px 150px; 
   background-color: #8BC0DF;
   color: #fff;
-<<<<<<< HEAD
   font-size: 20px;
-=======
-  font-size: 30px;
->>>>>>> 717f9f3406334defab20487f1a3b0774d3deb867
   font-weight: bold;
   flex-wrap: wrap;
 }
