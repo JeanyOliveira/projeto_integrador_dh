@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+#card-pai{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+#card-login{
+    position: relative;
+    border-radius: 20px;
+    width: 250px;
+    height: 230px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #8BC0DF;
+    color:white
+}
+
+#card-login h1{
+    text-align: center;
+}
+
+.ent-dados{
+    width: 220px;
+    margin-left: 10px;
+}
+h5{
+    margin-left: 10px;
+}
+
+img{
+    width:800px;
+}
+
+#btnEntrar{
+    position: inherit;
+    margin-left: 90px;
+    padding: 5px;
+    width: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7728ab;
+    color:white
+}
+#btnFacebook{
+    
+    position: inherit;
+    margin-left: 45px;
+    padding: 2px;
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3b5998;
+    color: white;
+}
+
+#ou{
+    position: inherit;
+    margin-left: 115px;
+    border-radius: 10px;
+    color:black
+    
+}
+input{
+    outline-color: white;
+}

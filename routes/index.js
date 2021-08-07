@@ -23,4 +23,8 @@ routes.get("/quemsomos", (req, res) => {
     res.render('quemsomos');
 });
 
+routes.get("/login",(req, res)=>{
+    res.render('login');
+})
+
 module.exports = routes;

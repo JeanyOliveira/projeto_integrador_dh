@@ -13,7 +13,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 100px;  
+  padding: 10px 100px;  
   flex-wrap: wrap;
 }
 
@@ -69,7 +69,7 @@ header input {
   font-size: 20px;
   font-weight: bold;
   flex-wrap: wrap;
-  height: 50px;
+  height: 30px;
 }
 
 footer {
