@@ -34,6 +34,7 @@
     align-items: center;
     margin-left: 60px;
     flex-wrap: wrap;
+    text-align: center;
   }
   .cards:hover{
     background-color: #7728ab;
@@ -65,37 +66,27 @@
     margin-top: 20px;
   }
 
-  #tituloCard{
-    position: absolute;
-    margin-top: 230px;
-    margin-left: -220px;
+  .tituloCard{
     color: white;
     flex-wrap: wrap;
   }
 
-  #precoCard{
-    position: absolute;
-    margin-top: 270px;
-    margin-left: -150px;
+  .precoCard{
     color: white;
     text-decoration: line-through;
     flex-wrap: wrap;
   }
 
-  #precoReal{
-    position: inherit;
-    margin-top: 300px;
-    margin-left: -170px;
+  .precoReal{
+    
     color: white;
     flex-wrap: wrap;
 
   }
 
-  #btnCard{
+  .btnCard{
     position: inherit;
     background-color: #7728ab;
-    margin-top: 10px;
-    margin-left: -140px;
     padding: 10px;
     border-radius: 10px;
     color: white;
