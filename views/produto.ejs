@@ -6,37 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/global.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/produto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    
     <title>Produto interno | PET IS LIFE</title>
 </head>
 
 <body>
     <%- include('components/header') %>
 
-    <main>        
-        <div class="produto-preco">
+    <main class="produto">
+        <section class="produto-preco">        
             <img src="/img/Caminha fundo transparente.png" alt="">            
             <div class="preco">
                 <h2>Cama Confort - Animal Print</h2>
                 <small>R$ 184,21</small>
                 <p>R$ 101,00</p>
-            </div>
-        </div>
-        <div class="descricao-produto">
+                <button class="b-comprar">Comprar</button>
+            </div>      
+        </section>
+        <section class="descricao-produto">      
             <h3>Descrição</h3>
             <p><strong>Idade: </strong> Adulto, Sênior e Filhote</p>
             <p><strong>Pet: </strong> Gatos e Cachorros</p>
             <p><strong>Porte de Raça: </strong> Pequeno e Médio</p>
             <p><strong>Cor: </strong> Bege</p>
             <p><strong>Medidas aproximadas: </strong></p>
-            <p><strong>Largura: </strong> 37cm</p>
-            <p><strong>Altura: </strong> 15cm</p>
-            <p><strong>Apresentação: </strong></p>
+            <p><strong class="p-left">Largura: </strong> 37cm</p>
+            <p><strong class="p-left">Altura: </strong> 15cm</p>
+            <p class="p-top"><strong>Apresentação: </strong></p>
             <p>Disponível em embalagem com 1 cama e 1 almofada.</p>
-            <p><strong>Material: </strong>Cama 100% fibras de poliéster/ Almofada poliéster e espuma de poliuretano</p>
-            <p><strong>Código de barras: </strong>7897750784129</p>
-        </div>
+            <p class="p-top"><strong>Material: </strong><br>Cama 100% fibras de poliéster/ Almofada poliéster e espuma de poliuretano</p>
+            <p class="p-top"><strong>Código de barras: </strong>7897750784129</p>       
+        </section>
     </main>
 
     <%- include('components/footer') %>
