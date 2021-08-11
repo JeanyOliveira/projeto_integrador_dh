@@ -2,7 +2,9 @@
 
 * {
   padding: 0;
-  margin: 0;  
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
 }
 
 a {
@@ -83,6 +85,10 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+}
+
+#h1Footer{
+  font-family: 'Sacramento', cursive;
 }
 
 #sac {
