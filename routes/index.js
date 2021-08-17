@@ -17,4 +17,8 @@ routes.get("/produtos", indexController.exibirProdutos);
 
 routes.get("/quemsomos", indexController.exibirQuemsomos);
 
+routes.get("/login",(req, res)=>{
+    res.render('login');
+})
+
 module.exports = routes;
