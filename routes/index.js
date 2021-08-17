@@ -2,25 +2,19 @@ const express = require('express');
 const path = require("path");
 const routes = express.Router();
 
+const indexController = require('../controllers/indexController');
+
 
 routes.get("/", (req, res) => {
     res.render('home');
 });
 
-routes.get("/home", (req, res) => {
-    res.render('home');
-});
+routes.get("/home", indexController.exibirHome);
 
-routes.get("/produto", (req, res) => {
-    res.render('produto');
-});
+routes.get("/produto", indexController.exibirProduto);
 
-routes.get("/produtos", (req, res) => {
-    res.render('produtos');
-});
+routes.get("/produtos", indexController.exibirProdutos);
 
-routes.get("/quemsomos", (req, res) => {
-    res.render('quemsomos');
-});
+routes.get("/quemsomos", indexController.exibirQuemsomos);
 
 module.exports = routes;
