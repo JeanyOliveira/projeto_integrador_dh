@@ -16,6 +16,10 @@ const indexController = {
     exibirQuemsomos: (req, res) => {
         res.render('quemsomos');
     },
+    
+    exibirCarrinho: (req, res) => {
+        res.render('carrinho');
+    }
 }
 
 module.exports = indexController;

@@ -1,0 +1,21 @@
+section.carrinho {
+    background-color: #8BC0DF;
+    height: 70px;
+    padding-top: 30px;
+}
+
+section.carrinho h1 {
+    color: #fff;
+    text-align: center;
+}
+
+#img-produto {
+    width: 300px;
+}
+
+section.produtos-carrinho {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+    align-items: center;
+}

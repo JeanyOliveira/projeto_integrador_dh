@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/carrinho.css" />
+    <title>Carrinho | PET IS LIFE</title>
+</head>
+<body>
+    <%- include('components/header') %>
+
+    <main>
+        <section class="carrinho">
+            <h1><strong>Carrinho</strong></h1>
+        </section>
+        <section class="produtos-carrinho">
+            <div class="produto">
+                <p>Produto</p>
+                <img id="img-produto" src="/img/Caminha fundo transparente.png" alt="caminha">
+            </div>
+            <div>
+                <p>Descrição</p>
+                <h2>Cama Confort - Animal Print</h2>
+            </div>
+            <div>
+                <p>quantidade</p>
+                <p>2</p>
+            </div>
+            <div>
+                <p>total</p>
+                <p>R$ 202,00</p>
+            </div>
+        </section>
+    </main>
+
+    <%- include('components/footer') %>
+</body>
+</html>

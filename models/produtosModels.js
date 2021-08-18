@@ -9,6 +9,7 @@ let listaDeProdutos = {
     Apresentacao: 'Disponível em embalagem com 1 cama e 1 almofada.',
     Material: 'Cama 100% fibras de poliéster/ Almofada poliéster e espuma de poliuretano',
     Codigo: 7897750784129,
+    imagem: '',
 }
 
 module.exports = listaDeProdutos;
