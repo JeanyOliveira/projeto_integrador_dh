@@ -18,10 +18,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
     background-color: #8BC0DF;
-    color:white
-}
-
-#card-login h1{
+    color:white;
     text-align: center;
 }
 
@@ -39,7 +36,6 @@ img{
 
 #btnEntrar{
     position: inherit;
-    margin-left: 90px;
     padding: 5px;
     width: 60px;
     border: none;
@@ -48,13 +44,11 @@ img{
     color:white
 }
 #btnFacebook{
-    
     position: inherit;
-    margin-left: 45px;
     padding: 2px;
-    width: 150px;
+    width: 155px;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     background-color: #3b5998;
     color: white;
@@ -62,11 +56,10 @@ img{
 
 #ou{
     position: inherit;
-    margin-left: 115px;
     border-radius: 10px;
     color:black
     
 }
-input{
-    outline-color: white;
+.ent-dados{
+    border-radius: 10px;
 }
