@@ -19,6 +19,10 @@ const indexController = {
     
     exibirCarrinho: (req, res) => {
         res.render('carrinho');
+        
+    },
+    exibirLogin: (req, res)=>{
+        res.render('login');
     }
 }
 

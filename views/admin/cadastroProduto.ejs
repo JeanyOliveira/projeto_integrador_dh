@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="../css/cadastro-produto.css">
+    <title>Admin - PET IS LIFE</title>
+</head>
+<body>
+    <%- include('../components/header') %>
+
+    <main>
+        <form action="/salvar-produto" method="POST">
+            <label>Nome do produto</label>
+            <input type="text" name="nome" />
+            
+            <label>Pet</label>
+            <input type="text" name="pet">
+            
+            <label>Preço</label>
+            <input type="text" name="preco" />
+
+            <label>Link da imagem do produto</label>
+            <input type="text" name="imagem" />
+
+            <button type="submit">Finalizar cadastro</button>
+        </form>
+    </main>
+
+    <%- include('../components/footer') %>
+</body>
+</html>
