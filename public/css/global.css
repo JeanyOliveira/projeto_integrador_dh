@@ -78,7 +78,7 @@ header input {
 }
 
 footer {
-  bottom: 0px;
+  margin-bottom: 0px;
   background-color: #8BC0DF;
   padding: 40px 210px;
   display: flex;

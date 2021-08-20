@@ -19,4 +19,6 @@ routes.get("/carrinho", indexController.exibirCarrinho);
 
 routes.get("/login", indexController.exibirLogin);
 
+routes.get("/categoria", indexController.exibirCategoria);
+
 module.exports = routes;

@@ -23,6 +23,9 @@ const indexController = {
     },
     exibirLogin: (req, res)=>{
         res.render('login');
+    },
+    exibirCategoria:(req, res)=>{
+        res.render('categoria');
     }
 }
 

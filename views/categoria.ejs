@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/categoria.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Sacramento&display=swap');
+    </style>
+    <title>CATEGORIA | PET IS LIFE</title>
+</head>
+
+<body>
+    <%- include('components/header') %>
+    <div class="container">
+        <div id="list">
+            <h3 id="categorias">Todos os produtos > Cachorros</h3>
+            <h5 class="tituloLista">Categorias</h5>
+            <ul>
+                <li>Ração</li>
+
+                <li>Petiscos e Ossos</li>
+
+                <li>Tapetes, Fraldas e Banheiros</li>
+
+                <li>Brinquedos</li>
+
+                <li>Coleiras, Guias e Peitorais</li>
+
+                <li>Beleza e Limpeza</li>
+
+                <li>Camas e Cobertores</li>
+
+                <li>Casas e Tocas</li>
+
+                <li>Acessórios de Alimentação</li>
+
+                <li>Acessórios de transporte</li>
+
+                <li>Portões, Grades e Escadas</li>
+
+                <li>Roupas</li>
+
+                <li>Adestramento e Comportamento</li>
+
+                <li>Raças</li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="filter">
+        <h3>Idade</h3>
+        <ul>
+            <input type="checkbox" id="adulto">
+            <label for="adulto">Adulto</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="filhote" id="filhote">
+            <label for="filhote">Filhote</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="senior" id="senior">
+            <label for="senior">Filhote</label>
+        </ul>
+
+        <h3>Porte de Raça</h3>
+
+        <ul>
+            <input type="checkbox" name="mini" id="mini">
+            <label for="mini">Mini</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="pequeno" id="pequeno">
+            <label for="pequeno">Pequeno</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="medio" id="medio">
+            <label for="mini">Médio</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="grande" id="grande">
+            <label for="mini">Grande</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="gigante" id="gigante">
+            <label for="mini">Gigante</label>
+        </ul>
+
+        <h3>Preço</h3>
+
+        <ul>
+            <input type="checkbox" name="preco1" id="preco1">
+            <label for="preco1">R$0,00 - R$ 25,00</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="preco2" id="preco2">
+            <label for="preco2">R$26,00 - R$ 50,00</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="preco3" id="preco3">
+            <label for="preco3">R$51,00 - R$ 100,00</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="preco4" id="preco4">
+            <label for="preco4">R$101,00 - R$ 200,00</label>
+        </ul>
+
+        <ul>
+            <input type="checkbox" name="preco5" id="preco5">
+            <label for="preco5">R$201,00+ </label>
+        </ul>
+
+    </div>
+
+
+    <%- include('components/footer') %>
+</body>
+
+</html>
