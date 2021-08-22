@@ -11,23 +11,37 @@
 <body>
     <%- include('../components/header') %>
 
-    <main>]
+    <main>
+        <div>
+            <a href="/admin/cadastro-produto">
+                <button id="button-cadastro">Cadastrar Novo Produto</button>
+            </a>
+        </div>
         <table>
             <thead>
-                <th>
-                    <td>id</td>
-                    <td>nome</td>
-                    <td>Ações</td>
-                </th>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>pet</th>
+                    <th>Ações</th>
+                </tr>
             </thead>
             <tbody>
+                <% produtos.forEach(produto => { %>
                 <tr>
-                    <td>2173283218-281648652187231</td>
-                    <td>Site Incrível</td>
+                    <td><%= produto.id %></td>
+                    <td><%= produto.nome %></td>
+                    <td><%= produto.pet %></td>
                     <td>
-                        <button>Excluir</button>
+                        <form
+                            method="POST"
+                            action="/deletar-produto/<%= produto.id %>?_method=DELETE"
+                        >
+                            <button id="button-delete" type="submit">Excluir</button>
+                        </form>
                     </td>
                 </tr>
+                <% }); %>
             </tbody>
         </table>
     </main>

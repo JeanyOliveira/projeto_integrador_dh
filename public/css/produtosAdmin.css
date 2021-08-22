@@ -1,2 +1,38 @@
 main {
+    text-align: center;
+    margin: 30px;
+}
+
+main div {
+    text-align: right;
+    margin: 20px 0px;
+}
+
+#button-cadastro {
+    background-color: #7728ab;
+    width: 100px;
+    color: #fff;
+}
+
+#button-delete {
+    background-color: #8BC0DF;
+    width: 100px;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
 }

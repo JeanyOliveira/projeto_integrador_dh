@@ -1,36 +1,32 @@
-const { v4: uuidv4 } = require('uuid');
-let listaDeProdutos = [
-    {
-        id: uuidv4(),
-        nome: 'Cama confort - animal print',
-        preco: 101.00,
-        pet: 'Gatos e Cachorros',    
-        Imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy1W6mI_nsgx-1YfRPSs-lJxpiDWprE-WbcyQD2HVLTff-97yvmeqqqkyYo_ZP8PRinvJcd6Ee&usqp=CAc',
+const {
+    v4: uuidv4
+} = require('uuid');
+const produtoModel = {
+    listaDeProdutos: [{
+            id: uuidv4(),
+            nome: 'caminha',
+            descricao: 'Uma caminha pro seu doguinho',
+            imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfASUAKgtGERKUbTqgn0-NbEi86jcqVzOCTTD_UD9aOt8wdojCzhx80xZr1-67fB6s70KLrNc&usqp=CAc',
+        },
+    ],
+    cadastrarProduto: function (nome, descricao, imagem) {
+        const novoProduto = {
+                id: uuidv4(),
+                nome,
+                descricao,
+                imagem,
+            };
+            return this.listaDeProdutos.push(novoProduto);
     },
-];
-
-function cadastrarProduto(nome, preco, pet, imagem) {
-    const novoProduto = {
-        id: uuidv4(),
-        nome,
-        preco,
-        pet,
-        imagem,
-    };
-    
-    return listaDeProdutos.push(novoProduto);
+    excluirProduto: function (id) {
+        const novaListaDeProdutos = this.listaDeProdutos.filter(
+            (produto) => produto.id !== id
+        );
+        if (novaListaDeProdutos.length >= this.listaDeProdutos.length) return false;
+        this.listaDeProdutos = novaListaDeProdutos;
+        return true;
+    },
 }
 
-function excluirProduto(id) {
-    const novaListaDeProdutos = listaDeProdutos.filter(
-        (produto) => produto.id != id
-    );
 
-    if (novaListaDeProdutos.length >= listaDeProdutos.length) return false;
-
-    listaDeProdutos = novaListaDeProdutos;
-
-    return true;
-}
-
-module.exports = { listaDeProdutos, cadastrarProduto, excluirProduto };
+module.exports = produtoModel;
