@@ -114,3 +114,67 @@ footer {
 #last-item a {
   color: #7728ab;
 }
+
+.conteiner-cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.cards:hover{
+  background-color: #7728ab;
+}
+
+.btnCard:hover{
+  background-color: black;
+}
+
+.cards{
+  
+  width: 300px;
+  height: 400px;
+  background-color: #8BC0DF;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-right: 70px;
+  flex-wrap: wrap;
+  transition: 1s;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+.imgProdutos{
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.tituloCard{
+  color: white;
+  flex-wrap: wrap;
+}
+
+.precoCard{
+  color: white;
+  text-decoration: line-through;
+  flex-wrap: wrap;
+}
+
+.precoReal{
+  
+  color: white;
+  flex-wrap: wrap;
+
+}
+
+.btnCard{
+  position: inherit;
+  background-color: #7728ab;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
