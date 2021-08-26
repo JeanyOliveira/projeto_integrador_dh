@@ -4,7 +4,7 @@ const indexController = {
     exibirHome: (req, res) => {
         res.render('home');
     },
-    
+
     exibirProduto: (req, res) => {
         res.render('produto');
     },
@@ -16,16 +16,19 @@ const indexController = {
     exibirQuemsomos: (req, res) => {
         res.render('quemsomos');
     },
-    
+
     exibirCarrinho: (req, res) => {
         res.render('carrinho');
-        
+
     },
-    exibirLogin: (req, res)=>{
+    exibirLogin: (req, res) => {
         res.render('login');
     },
-    exibirCategoria:(req, res)=>{
+    exibirCategoria: (req, res) => {
         res.render('categoria');
+    },
+    exibirFinalizacaodecompra: (req, res) => {
+        res.render('finalizacaodecompra');
     }
 }
 

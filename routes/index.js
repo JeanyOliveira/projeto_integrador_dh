@@ -21,4 +21,6 @@ routes.get("/login", indexController.exibirLogin);
 
 routes.get("/categoria", indexController.exibirCategoria);
 
+routes.get("/finalizacaodecompra", indexController.exibirFinalizacaodecompra);
+
 module.exports = routes;
