@@ -1,5 +1,4 @@
 .container{
-    display: flex;
     justify-content: right;
     margin-left: 20px;
 }
@@ -41,7 +40,7 @@ font-weight: 500;
 font-size: 15px;
 }
 
-#filter h3{
+.container h3{
 font-family: Montserrat;
 font-style: normal;
 font-weight: bold;
@@ -52,6 +51,10 @@ color: #8BC0DF;
 margin-top: 20px;
 }
 
-#filter{
-margin-left: 20px;
+div{
+    display: inline-block;
+}
+
+#categCard{
+    float: right;
 }

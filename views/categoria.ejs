@@ -50,9 +50,9 @@
             </ul>
         </div>
 
-    </div>
-    <div id="filter">
         <h3>Idade</h3>
+
+        <div class="checkbox">
         <ul>
             <input type="checkbox" id="adulto">
             <label for="adulto">Adulto</label>
@@ -121,9 +121,16 @@
             <input type="checkbox" name="preco5" id="preco5">
             <label for="preco5">R$201,00+ </label>
         </ul>
+        </div>
 
     </div>
 
+
+
+    <div id="categCard">
+        <%- include('components/cards') %>
+        <%- include('components/cards') %>
+    </div>
 
     <%- include('components/footer') %>
 </body>
