@@ -1,3 +1,38 @@
 main {
-    
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    flex-wrap: wrap;
+}
+
+label {
+    margin: 5px;
+}
+
+.inputs {   
+    border: 1px solid black;
+    margin: 5px;
+    width: 200px;
+    font-size: 17px;
+    padding: 3px;
+    text-align: center;
+}
+
+#input-img {
+    margin: 5px;
+    font-size: 17;
+    width: 200px;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+main button {
+    background-color: #7728ab;
+    padding: 15px 30px;
+    border-radius: 14px;
+    border: 4px;
+    color: #fff;
 }
