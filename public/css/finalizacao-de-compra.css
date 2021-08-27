@@ -1,156 +1,43 @@
-*{
-    margin: 0px;
-    padding:0px;
-}
-
-#card-pai{
+.finalizacao-de-compra {
     display: flex;
-    justify-content: center;
-    
-    
+    justify-content: space-around;
+    margin: 20px;
+
 }
 
-#card-login{
-    position: relative;
-    border-radius: 20px;
-    width: 270px;
-    height: 430px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.minha-conta {
     background-color: #8BC0DF;
-    color:white;
+    width: 300px;
+    padding: 10px;
+}
+
+.minha-conta h1 {
     text-align: center;
 }
 
-#card-login h5 {
-
-    text-align:  left;
-}
-
-
-
-
-#btnVerinformacoes{
-    position: inherit;
-    padding: 7px;
-    width: 200px;
-    border: none;
-    border-radius: 10px;
-    background-color: #7728ab;
-    color:white;
-    margin-top: 10px;
-}
-
-
-#card-pai p{
-    font-size: 10px;
-    color:black;
-    margin-top: 15px;
-}
-
-#card-pai p a{
-    text-decoration: underline;
-}
-
-#card-pai h1{
-    margin-top: 10px;
-    font-weight: 500;
-}
-
-#card-pai input{
-    border: 4px solid #8BC0DF;
-    border-radius: 14px;
-    padding: 5px;
-    width: 200px;
-    border-radius: 14px;
-    outline: none;
-}
-
-section.meus-pedidos {
-    height: 70px;
+.meus-pedidos {
+    display: flex;
     padding-top: 30px;
+    width: 500px;
+    height: 400px;
+    flex-direction: column;
 }
 
-section.meus-pedidos h1 {
-    color: black;
+.meus-pedidos h1 {
     text-align: center;
 }
 
-
-section.produtos-carrinho {
+.pedidos {
     display: flex;
-    justify-content: space-around;
-    margin: 100px 200px;
-    align-items: center;
+    margin: 10px;
+    justify-content: space-between;
 }
 
-section.produtos-carrinho p {
-    display: flex;
-    justify-content: space-around;
-    margin: 100px 200px;
-    align-items: left;
-}
-
-section.produtos-carrinho {    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 100px;
-}
-
-section.produtos-carrinho button {
-    background-color: #7728ab;
-    padding: 15px 30px;
-    border-radius: 14px;
-    border: 4px;
-    color: #fff;
-}
-
-.resumo {
-    background-color: #8BC0DF;
-    width: 700px;
-    padding: 40px;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-}
-
-#button-resumo {
+.button-resumo {
     background-color: #7728ab;
     padding: 15px 30px;
     border-radius: 14px;
     border: 4px;
     color: #fff;
     text-align:  right;
-}
-
-.resumo-last {
-    text-align: center;
-}
-
-section.frete-preco p {
-    margin: 5px;
-}
-
-.pedidos-1 {
- display:flex
-}
-.pedidos-2 {
-    display:flex
-}
-.pedidos-3 {
-    display:flex
-}
-
-.descricao{
-
-}
-
-.quantidade{
-
-}
-
-.pagamento{
-    
 }
