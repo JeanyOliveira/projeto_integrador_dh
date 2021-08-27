@@ -4,8 +4,11 @@
   }
 
   #slide{
-    position: relative;
     cursor: pointer;
+  }
+
+  #slide-width {
+    width: 100%;
   }
 
   main{

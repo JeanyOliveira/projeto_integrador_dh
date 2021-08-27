@@ -5,14 +5,16 @@ const produtoModel = {
     listaDeProdutos: [{
             id: uuidv4(),
             nome: 'caminha',
+            pet: 'dog',
             descricao: 'Uma caminha pro seu doguinho',
             imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfASUAKgtGERKUbTqgn0-NbEi86jcqVzOCTTD_UD9aOt8wdojCzhx80xZr1-67fB6s70KLrNc&usqp=CAc',
         },
     ],
-    cadastrarProduto: function (nome, descricao, imagem) {
+    cadastrarProduto: function (nome, descricao, pet, imagem) {
         const novoProduto = {
                 id: uuidv4(),
                 nome,
+                pet,
                 descricao,
                 imagem,
             };
