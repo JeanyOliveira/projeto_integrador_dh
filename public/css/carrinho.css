@@ -4,12 +4,6 @@ section.carrinho {
     padding-top: 30px;
 }
 
-@media (max-width: 450px) {
-   body {
-   }
-}
-
-
 section.carrinho h1 {
     color: #fff;
     text-align: center;

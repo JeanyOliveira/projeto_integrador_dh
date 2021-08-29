@@ -24,12 +24,6 @@ a {
   flex-wrap: wrap;
 }
 
-@media (max-width: 450px) {
-  .header1 {
-
-  }
-}
-
 header input {   
   border: 4px solid #8BC0DF;
   border-radius: 14px;
