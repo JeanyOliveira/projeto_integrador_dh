@@ -13,17 +13,21 @@
 
     <main>
         <form action="/salvar-produto" method="POST">
-            <label>Nome do produto</label>
-            <input type="text" name="nome" />
+            <label>Nome do produto:</label><br>
+            <input class="inputs" type="text" name="nome" placeholder="Caminha" />
+            <br>
             
-            <label>Pet</label>
-            <input type="text" name="pet">
+            <label>Pet:</label><br>
+            <input class="inputs" type="text" name="pet" placeholder="Peixe">
+            <br>
             
-            <label>Preço</label>
-            <input type="text" name="preco" />
+            <label>Preço:</label><br>
+            <input class="inputs" type="text" name="preco" placeholder="9,99" />
+            <br>
 
-            <label>Link da imagem do produto</label>
-            <input type="text" name="imagem" />
+            <label>Imagem do produto:</label><br>
+            <input id="input-img" type="file" name="imagem" />
+            <br>
             
             <button type="submit">Finalizar cadastro</button>
         </form>
