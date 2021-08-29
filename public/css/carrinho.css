@@ -4,6 +4,12 @@ section.carrinho {
     padding-top: 30px;
 }
 
+@media (max-width: 450px) {
+   body {
+   }
+}
+
+
 section.carrinho h1 {
     color: #fff;
     text-align: center;
@@ -18,6 +24,14 @@ section.produtos-carrinho {
     justify-content: space-around;
     margin: 100px 200px;
     align-items: center;
+}
+
+@media (max-width: 450px) {
+    section.produtos-carrinho {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
 }
 
 section.frete-preco {    
@@ -69,6 +83,23 @@ section.frete-preco button {
 
 .resumo-last {
     text-align: center;
+}
+
+@media (max-width: 450px) {
+    .frete-preco {
+        text-align: center;
+    }
+    .resumo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .frete {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 section.frete-preco p {

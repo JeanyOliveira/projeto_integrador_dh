@@ -12,6 +12,9 @@ a {
   color: #fff;
 }
 
+@media (max-width: 450px) {
+  
+}
 
 .header1 {
   display: flex;
@@ -19,6 +22,12 @@ a {
   align-items: center;
   padding: 10px 100px;  
   flex-wrap: wrap;
+}
+
+@media (max-width: 450px) {
+  .header1 {
+
+  }
 }
 
 header input {   
@@ -47,6 +56,8 @@ header input {
   border: 4px;
   color: #fff;
 }
+
+
 
 #button-header2 {
   background-color: #7728ab;
@@ -77,6 +88,15 @@ header input {
   height: 30px;
 }
 
+@media (max-width: 450px) {
+  .header2 {
+    display: flex;
+    height: 250px;
+    text-align: center;
+  }
+}
+
+
 footer {
   margin-bottom: 0px;
   background-color: #8BC0DF;
@@ -87,6 +107,46 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
 }
+
+#button-menu {
+  background-color: #7728ab;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#menu-mobile {
+  display: none;
+}
+
+.input-busca {
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 100px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+@media (max-width: 450px) {
+  footer {
+    padding: 60px;
+    gap: 20px;
+  }
+  #menu-mobile {
+    display: block;
+    text-align: right;
+    margin-right: 70px;
+  }
+  .input-busca {
+    display: none;
+  }
+  #logo {
+    display: block;
+  }
+}
+
+
 
 #h1Footer{
   font-family: 'Sacramento', cursive;
@@ -145,6 +205,11 @@ footer {
   color: white;
 }
 
+@media (max-width: 450px) {
+  #cards {
+    display: none;
+  }
+}
 
 
 .imgProdutos{
@@ -178,3 +243,4 @@ footer {
   border-radius: 10px;
   color: white;
 }
+
