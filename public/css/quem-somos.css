@@ -28,3 +28,16 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+@media (max-width: 450px) {
+    main div img {
+        display: none;
+    }
+    .header2 {
+        display: none;
+    }
+    main {
+        text-align: left;
+        padding: 0px;
+    }
+}
