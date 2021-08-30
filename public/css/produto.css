@@ -1,69 +1,82 @@
-main.produto{
-    display: flex;
-    flex-direction: column;
+main.produto {
+  display: flex;
+  flex-direction: column;
 }
 
 .produto-preco {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0px 150px;
-    color: white;
-    font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 150px;
+  color: white;
+  font-size: 22px;
 }
 
 main.produto img {
-    width: 450px;
+  width: 450px;
 }
 
 .preco {
-    background-color: #8BC0DF;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    width: 400px;
-    height: 200px;
-    padding: 30px;
-    justify-content: space-around;    
-    align-items: center;
+  background-color: #8bc0df;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  padding: 30px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .b-comprar {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #7728ab;
-    color: #fff;
-    font-size: 17px;
-    border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #7728ab;
+  color: #fff;
+  font-size: 17px;
+  border: none;
 }
 
 div.preco small {
-    text-decoration: line-through
+  text-decoration: line-through;
 }
 
-section.descricao-produto{
-    margin: 0 400px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
+section.descricao-produto {
+  margin: 0 400px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
 
-section.descricao-produto h3{
-    margin-bottom: 50px;
-    font-size: 30px;
-    color: #8BC0DF;
+section.descricao-produto h3 {
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: #8bc0df;
 }
 
 section.descricao-produto p {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
-.p-left {margin-left: 30px;}
+.p-left {
+  margin-left: 30px;
+}
 
 .p-top {
-    margin-top: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 450px) {
+  .preco {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  section.descricao-produto {
+    margin: 0;
+    padding: 25px;
+  }
 }

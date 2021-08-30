@@ -1,84 +1,85 @@
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
 
-  #slide{
-    cursor: pointer;
-  }
+#slide {
+  cursor: pointer;
+}
 
-  #slide-width {
+#slide-width {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: initial;
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
+
+.seta-esquerda {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 225px;
+}
+
+.seta-direita {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 225px;
+}
+
+#marcasParceiras {
+  display: flex;
+  justify-content: center;
+}
+
+.marcasLinha1 {
+  display: flex;
+  justify-content: center;
+  padding: 50px black;
+}
+
+#tituloMarca {
+  margin-left: 11%;
+  text-align: left;
+}
+
+.marcasLinha1 img {
+  width: 5vw;
+  border: 4px solid #999;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: 1s;
+}
+
+.marcasLinha1 img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.button-header2 {
+  background-color: #7728ab;
+  padding: 11px 40px;
+  border-radius: 50px;
+  border: 4px solid;
+  color: #fff;
+}
+
+.blog img {
+  width: 20vw;
+}
+
+@media (max-width: 450px) {
+  .marcasLinha1 {
+    background-color: red;
     width: 100%;
+    align-items: center;
   }
-
-  main{
-    display: flex;
-    justify-content: initial;
-    overflow-x: hidden;
-    width: 100%;
-    height: auto;
-    margin-top: 5px;
+  .marcasLinha1 img {
+    width: 20px;
   }
-
-  .seta-esquerda{
-    width: 25px;
-    height: 25px;
-    margin-bottom: 225px;
-  }
-
-  .seta-direita{
-    width: 25px;
-    height: 25px;
-    margin-bottom: 225px;
-  }
-
-  
-  #marcasParceiras{
-    display: flex;
-    justify-content: center;
-  }
-
-  .marcasLinha1{
-    display: flex;
-    justify-content: center;
-    padding: 50px black;
-  }
-
-  #tituloMarca{
-    margin-left: 11%;
-    text-align:left;
-  }
-
-  .marcasLinha1 img{
-    width: 5vw;
-    border:4px solid #999;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    transition: 1s;
-  }
-
-  .marcasLinha1 img:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-
-  }
-
-  .blog{
-
-  }
-
-  .button-header2{
-    background-color: #7728ab;
-    padding: 11px 40px;
-    border-radius: 50px;
-    border: 4px solid;
-    color: #fff;
-
-  }
-
-  .blog img{
-    width: 20vw;
-  }
-
-  
-  
+}

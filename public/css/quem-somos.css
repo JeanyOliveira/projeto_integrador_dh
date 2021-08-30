@@ -1,43 +1,43 @@
 main div img {
-    width: 1000px;
-    height: 500px;
+  width: 1000px;
+  height: 500px;
 }
 
 main div {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 main div h1 {
-    padding-bottom: 30px;
-    color: #8BC0DF;
+  padding-bottom: 30px;
+  color: #8bc0df;
 }
 
-main { 
-    display: flex;
-    flex-direction: column;
-    padding: 50px 160px;
-    flex-wrap: wrap;    
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 160px;
+  flex-wrap: wrap;
 }
 
-.quem-somos { 
-    margin: 80px;
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.quem-somos {
+  margin: 80px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 @media (max-width: 450px) {
-    main div img {
-        display: none;
-    }
-    .header2 {
-        display: none;
-    }
-    main {
-        text-align: left;
-        padding: 0px;
-    }
+  main div img {
+    display: none;
+  }
+  .header2 {
+    display: none;
+  }
+  main {
+    text-align: left;
+    padding: 0px;
+  }
 }
