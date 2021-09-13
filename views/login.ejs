@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
     <title>Login | PET IS LIFE</title>
 </head>
 
@@ -25,11 +26,28 @@
             <button id="btnEntrar" type="submit">Entrar</button>
             <h5 id="ou">ou</h5>
             <button id="btnFacebook">Entrar com Facebook</button>
-            <p>não tem cadastro ? <a href="#">cadastre-se</a></p>
+            <p>Não tem cadastro ? <a href="/cadastro">Cadastre-se</a></p>
             </div>
         </div>
         <img src="/img/dog-login.png" alt="">
     </div>
+
+    <main>
+        <% if(typeof error !== 'undefined') { %> 
+        <h1><%= error %></h1>
+        <% } %> 
+        <form
+        action="/verificarUsuario"
+        method="POST"
+        >
+          <label>Email</label>
+          <input type="email" name="email" />
+          <label>Senha</label>
+          <input type="password" name="senha" />
+          <button type="submit">Enviar</button>
+          <small>Não tem cadastro? <a href="/cadastro">Clique aqui</a></small>
+        </form>
+      </main>    
     
     <%- include('components/footer') %>
 </body>
