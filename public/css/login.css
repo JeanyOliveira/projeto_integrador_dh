@@ -1,31 +1,41 @@
-* {
-  margin: 0px;
-  padding: 0px;
+
+
+@media (max-width: 450px) {
+  #card-pai img {
+    display: none;
+  }
 }
 
-#card-pai {
+main {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
 }
 
-#card-login {
-  position: relative;
+form {
+  background-color: #8bc0df;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   border-radius: 20px;
   width: 270px;
-  height: 430px;
+  /*! height: 430px; */
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #8bc0df;
-  color: white;
+  color: #fff;
+  padding: 20px;
   text-align: center;
+  gap: 10px;
 }
 
-.ent-dados {
-  width: 220px;
-  margin-left: 10px;
+.input-login {
+  border-radius: 10px;
+  padding: 5px;
 }
-h5 {
-  margin-left: 10px;
+
+#click {
+  color: #3b5998;
 }
 
 img {
@@ -33,7 +43,6 @@ img {
 }
 
 #btnEntrar {
-  position: inherit;
   padding: 7px;
   width: 200px;
   border: none;
@@ -41,9 +50,9 @@ img {
   background-color: #7728ab;
   color: white;
   margin-top: 10px;
+  margin-left: 40px;
 }
 #btnFacebook {
-  position: inherit;
   padding: 2px;
   width: 200px;
   height: 35px;
@@ -51,45 +60,5 @@ img {
   border: none;
   background-color: #3b5998;
   color: white;
-}
-
-#ou {
-  position: inherit;
-  border-radius: 10px;
-  color: black;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.ent-dados {
-  border-radius: 10px;
-}
-
-#card-pai p {
-  font-size: 10px;
-  color: black;
-  margin-top: 15px;
-}
-
-#card-pai p a {
-  text-decoration: underline;
-}
-
-#card-pai h1 {
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-#card-pai input {
-  border: 4px solid #8bc0df;
-  border-radius: 14px;
-  padding: 5px;
-  width: 200px;
-  border-radius: 14px;
-  outline: none;
-}
-
-@media (max-width: 450px) {
-  #card-pai img {
-    display: none;
-  }
+  margin-left: 40px;
 }

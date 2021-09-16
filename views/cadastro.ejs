@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/cadastro.css" />
     <title>Depoimentos</title>
   </head>
   <body>
     <%- include('components/header') %>
-    <main>
+    <main class="main-form">
       <form 
       action="/salvarUsuario"
       method="POST"
       >
-        <label>Nome Completo</label>
-        <input type="text" name="nome" />
-        <label>Email</label>
-        <input type="email" name="email" />
-        <label>Senha</label>
-        <input type="password" name="senha" />
-        <button type="submit">Enviar</button>
+        <label class="label-cadastro">Nome Completo:</label>
+        <input class="input-cadastro" type="text" name="nome" />
+        <label class="label-cadastro">Email:</label>
+        <input class="input-cadastro" type="email" name="email" />
+        <label class="label-cadastro">Senha:</label>
+        <input class="input-cadastro" type="password" name="senha" />
+        <button id="button-cadastro" type="submit">Cadastrar</button>
         <small
           >Já tem um cadastro?
           <a href="/login">Clique aqui e faça login</a></small
         >
-      </form>
-      <%- include('components/footer') %>
+      </form>      
     </main>
+    <%- include('components/footer') %>
   </body>
 </html> 
