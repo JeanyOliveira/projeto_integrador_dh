@@ -1,12 +1,18 @@
+
+
 main.main-form {
     background-color: #8BC0DF;
-    margin: 20px 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 10px;    
+    width: 400px;
+    margin-left: 40%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 800px) {
     main.main-form {
         margin: 20px;
+        width: 90%;
     }
 }
 
@@ -29,6 +35,7 @@ form {
 .input-cadastro {
     padding: 5px;
     font-size: 14px;
+    border-radius: 5px;
 }
 
 #button-cadastro {

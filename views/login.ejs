@@ -18,22 +18,26 @@
     <%- include('components/header') %>
     
     <main>
-        <% if(typeof error !== 'undefined') { %>
-        <h1><%= error %></h1>
-        <% } %>
-        <form action="/verificarUsuario" method="POST">
-            <h1>Login Cliente</h1>
-            <label>Email:</label>
-            <input class="input-login" type="email" name="email" />
-            <label>Senha:</label>            
-            <input class="input-login" type="password" name="senha" />
-            <button id="btnEntrar" type="submit">Entrar</button>
-            <small>Esqueci minha senha</small>
-            <small>Não tem cadastro? <a id="click" href="/cadastro">Clique aqui</a></small>
-            <small>ou entre com o facebook</small>            
-            <button id="btnFacebook" type="submit">Facebook</button>
-        </form>
-        <img src="/img/dog-login.png" alt="">
+
+        <div class="container">
+            <% if(typeof error !== 'undefined') { %>
+                <h1><%= error %></h1>
+                <% } %>
+                <form action="/verificarUsuario" method="POST">
+                    <h1>Login Cliente</h1>
+                    <label>Email:</label>
+                    <input class="input-login" type="email" name="email" />
+                    <label>Senha:</label>            
+                    <input class="input-login" type="password" name="senha" />
+                    <button id="btnEntrar" type="submit">Entrar</button>
+                    <small>Esqueci minha senha</small>
+                    <small>Não tem cadastro? <a id="click" href="/cadastro">Clique aqui</a></small>
+                    <small>ou entre com o facebook</small>            
+                    <button id="btnFacebook" type="submit">Facebook</button>
+                </form>
+                <img src="/img/dog-login.png" alt="">
+        </div>
+        
     </main>
 
     <%- include('components/footer') %>
