@@ -4,9 +4,13 @@
   #card-pai img {
     display: none;
   }
+
+  #bt-entrar {
+    color: black;
+  }
 }
 
-main {
+.cartao {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -42,7 +46,7 @@ img {
   width: 600px;
 }
 
-#btnEntrar {
+#bt-entrar {
   padding: 7px;
   width: 200px;
   border: none;
@@ -52,7 +56,7 @@ img {
   margin-top: 10px;
   margin-left: 40px;
 }
-#btnFacebook {
+#bt-face {
   padding: 2px;
   width: 200px;
   height: 35px;
