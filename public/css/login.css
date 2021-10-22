@@ -13,20 +13,33 @@
   justify-content: center;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 form {
   background-color: #8bc0df;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   border-radius: 20px;
-  width: 270px;
-  /*! height: 430px; */
+  width: 350px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #fff;
   padding: 20px;
   text-align: center;
   gap: 10px;
+}
+
+@media (max-width:450px) {  
+    form {
+      width: 350px;
+      margin: 30px;
+    }  
 }
 
 .input-login {
