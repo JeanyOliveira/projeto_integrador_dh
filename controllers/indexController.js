@@ -29,7 +29,11 @@ const indexController = {
     },
     exibirFinalizacaodecompra: (req, res) => {
         res.render('finalizacaodecompra');
+    },
+    exibirCadastroCategoria: (req, res) => {
+        res.render("admin/cadastrocategoria");
     }
+    
 }
 
 module.exports = indexController;
