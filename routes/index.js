@@ -21,7 +21,13 @@ routes.get("/login", indexController.exibirLogin);
 
 routes.get("/categoria", indexController.exibirCategoria);
 
+routes.get("/admin", indexController.exibirAdmin)
+
+routes.get("/admin/adminprodutos", indexController.exibirAdminProdutos)
+
 routes.get("/admin/cadastrocategoria", indexController.exibirCadastroCategoria)
+
+routes.get("/admin/admincategorias", indexController.exibirAdminCategorias)
 
 routes.get("/finalizacaodecompra", indexController.exibirFinalizacaodecompra);
 

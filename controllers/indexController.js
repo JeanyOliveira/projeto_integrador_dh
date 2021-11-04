@@ -30,6 +30,15 @@ const indexController = {
     exibirFinalizacaodecompra: (req, res) => {
         res.render('finalizacaodecompra');
     },
+    exibirAdmin: (req,res) => {
+        res.render('admin/admin');
+    },
+    exibirAdminProdutos: (req,res)=>{
+        res.render('admin/adminprodutos');
+    },
+    exibirAdminCategorias: (req,res)=>{
+        res.render('admin/admincategorias')
+    },
     exibirCadastroCategoria: (req, res) => {
         res.render("admin/cadastrocategoria");
     }
