@@ -10,8 +10,13 @@
 </head>
 <body>
     <%- include('../components/header') %>
-
     <main>
+        <div>
+            <% if(typeof error != 'undefined'){%>
+            <h4><%= error %></h4>
+            <% } %>
+          </div>
+        
         <div>
             <a href="/admin/cadastro-produto">
                 <button id="button-cadastro">Cadastrar Novo Produto</button>
@@ -20,24 +25,29 @@
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>nome</th>
-                    <th>pet</th>
+                    <th>Id</th>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> 
                 <% produtos.forEach(produto => { %>
                 <tr>
                     <td><%= produto.id %></td>
-                    <td><%= produto.nome %></td>
-                    <td><%= produto.pet %></td>
+                    <td><%= produto.name %></td>
+                    <td><%= produto.preco %></td>
+                    <td><%= produto.description %></td>
                     <td>
                         <form
                             method="POST"
                             action="/deletar-produto/<%= produto.id %>?_method=DELETE"
                         >
                             <button id="button-delete" type="submit">Excluir</button>
+                        </form>
+                        <form action="/editar-produto/<%=produto.id%>" method="GET" enctype="multipart/form-data">
+                            <button type="submit" id="button-edit">Editar</button>
                         </form>
                     </td>
                 </tr>
@@ -47,5 +57,6 @@
     </main>
 
     <%- include('../components/footer') %>
+    <script src="/js/products.js"></script>
 </body>
 </html>

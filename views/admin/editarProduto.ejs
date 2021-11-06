@@ -17,28 +17,28 @@
             <h4><%= error %></h4>
             <% } %>
           </div>
-        <form action="/salvar-produto" method="POST" enctype="multipart/form-data">
+        <form method="POST" action="/salvar-edicao-produto/<%=produto.id %>?_method=PUT" enctype="multipart/form-data">
             <label>Nome do produto:</label><br>
-            <input class="inputs" type="text" name="name" placeholder="coleira" />
+            <input class="inputs" type="text" name="name" value="<%=produto.name %>" />
             <br>
             
             <label>Pet:</label><br>
-            <input class="inputs" type="text" name="pet" placeholder="cachorro">
+            <input class="inputs" type="text" name="pet">
             <br>
             
             <label>Preço:</label><br>
-            <input class="inputs" type="text" name="preco" placeholder="9,99" />
+            <input class="inputs" type="text" name="preco" value="<%= produto.preco %> " />
             <br>
 
             <label>Descrição</label><br>
-            <input class="inputs" type="text" name="description" placeholder="descrição"/>
+            <input class="inputs" type="text" name="description" value="<%= produto.description %> "/>
             <br>
 
             <label>Imagem do produto:</label><br>
-            <input id="input-img" type="file" name="image" />
+            <input id="input-img" type="file" name="image" value="<%=produto.image%>" />
             <br>
 
-            <button type="submit">Finalizar cadastro</button>
+            <button type="submit">Salvar edição</button>
         </form>
     </main>
 

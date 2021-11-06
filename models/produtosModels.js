@@ -1,34 +1,46 @@
-const {
-    v4: uuidv4
-} = require('uuid');
-const produtoModel = {
-    listaDeProdutos: [{
-            id: uuidv4(),
-            nome: 'caminha',
-            pet: 'dog',
-            descricao: 'Uma caminha pro seu doguinho',
-            imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfASUAKgtGERKUbTqgn0-NbEi86jcqVzOCTTD_UD9aOt8wdojCzhx80xZr1-67fB6s70KLrNc&usqp=CAc',
+module.exports = (conection, DataTypes) => {
+    const Produto = conection.define("Product", {
+        id: {
+          type: DataTypes.INTEGER,
+          primaryKey: true,
+          autoIncrement: true,
         },
-    ],
-    cadastrarProduto: function (nome, descricao, pet, imagem) {
-        const novoProduto = {
-                id: uuidv4(),
-                nome,
-                pet,
-                descricao,
-                imagem,
-            };
-            return this.listaDeProdutos.push(novoProduto);
-    },
-    excluirProduto: function (id) {
-        const novaListaDeProdutos = this.listaDeProdutos.filter(
-            (produto) => produto.id !== id
-        );
-        if (novaListaDeProdutos.length >= this.listaDeProdutos.length) return false;
-        this.listaDeProdutos = novaListaDeProdutos;
-        return true;
-    },
-}
-
-
-module.exports = produtoModel;
+        name: {
+          type: DataTypes.STRING(200),
+        },
+        aumont: {
+          type: DataTypes.BIGINT,
+        },
+        preco: {
+          type: DataTypes.DECIMAL,
+        },
+        status: {
+          type: DataTypes.BOOLEAN,
+        },
+        description: {
+          type: DataTypes.STRING(255),
+        },
+        image: {
+          type: DataTypes.STRING(250),
+        },
+        category_id: {
+            type: DataTypes.INTEGER,
+          },
+        brand_id: {
+           type: DataTypes.INTEGER,
+        },
+        created_at: {
+            type: DataTypes.DATE,
+          },
+        updated_at: {
+            type: DataTypes.DATE
+        },
+      },
+      {
+        tableName: "product",
+        timestamps: false,
+      }
+    );
+  
+    return Produto;
+  };
