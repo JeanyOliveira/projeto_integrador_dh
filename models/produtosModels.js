@@ -42,5 +42,15 @@ module.exports = (conection, DataTypes) => {
       }
     );
   
+      // Produto.associate = (models) => {
+      //   Produto.belongsTo(models.Brand, {
+      //     foreignKey: "brand_id",
+      //   });
+
+      //   Produto.associate(models.category, {
+      //     foreignKey: "category_id",
+      //   });
+      // };
+      
     return Produto;
   };

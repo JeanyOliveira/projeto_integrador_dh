@@ -17,11 +17,15 @@
 <body>
     <%- include('components/header') %>
     <main>
+        <div>
+            <% if(typeof error != 'undefined'){%>
+            <h6><%= error %></h6>
+            <% } %>
+        </div> 
 
         <div id="slide">
             <img id="slide-width" src="/img/slide/bannerSlide.png">
         </div>
-
     </main>
 
     <%- include('components/cards') %>

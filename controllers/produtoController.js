@@ -4,12 +4,13 @@ const produtoController = {
     async listarProdutosAdmin (req, res) {
         try {
             const listaDeProdutos = await Product.findAll();
-
+            
             return res.render('admin/produtosAdmin', {
-                produtos:listaDeProdutos,
+                produtos:listaDeProdutos
             });   
+
         } catch (error) {
-            return res.render("admin/produtosAdmin", {error: "Erro ao carregar produtos"})
+            return res.render("home", {error: "Erro ao carregar produtos"})
         }
     },
     cadastrarProduto: (req, res) => {
@@ -51,7 +52,7 @@ const produtoController = {
             const produtoParaSerEditado = await Product.findOne({
                 where: {id: req.params.id}
             })
-            console.log("passou por aqui")
+
             if(produtoParaSerEditado != null)
                 return res.render('admin/editarProduto', {produto: produtoParaSerEditado})    
             return res.render('admin/produtosAdmin', {error: "Não há produtos cadastrado.", produtos: null})
@@ -62,18 +63,17 @@ const produtoController = {
     async salvarEdicao(req, res){
         try {
             const { name, preco, description } = req.body
-            console.log("filename ", req.file)
             await Product.update({
                 name,
                 preco,
                 description,
-                image: req.file.filename
+                image: req.file.filename,
+                updated_at: new Date().toISOString()
             },
                 {
                     where: {id: req.params.id},
                 }
             );
-
             return res.redirect("/admin/produtosAdmin")
         } catch (error) {
             return res.render("admin/editarProduto", {error: "Erro ao tentar editar produto.", produto: req.body})
