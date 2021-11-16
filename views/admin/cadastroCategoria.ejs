@@ -11,5 +11,22 @@
 </head>
 <body>
     <%- include('../components/header') %>
+
+    <div class="container mt-4">
+    <form class="row g-3"
+      action="/cadastarCategoria"
+      method="POST"
+      >
+        <div class="col-md-6">
+          <label for="name" class="form-label">Nome da Categoria</label>
+          <input type="text" class="form-control" name="name" id="name">
+          <button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
+        </div>
+        </div>
+        
+          
+        </div>
+      </form>
+    </div>
 </body>
 </html>
