@@ -18,12 +18,12 @@ const usuarioController = {
       })
       if(!user) {
         return res.render('login', {
-          error: 'Usuário não existe!'})
+          error: 'Usuário ou senha estão incorretos!'})
       }
 
       if(!bcrypt.compareSync(password, user.password)) {
         return res.render('login', {
-          error: 'Senha está errada!'})
+          error: 'Usuário ou senha estão incorretos!'})
       }
 
       // DEU CERTO!
