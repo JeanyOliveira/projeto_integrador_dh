@@ -20,15 +20,19 @@
     <main>
 
         <div class="container">
-            <% if(typeof error !== 'undefined') { %>
-                <h1><%= error %></h1>
-                <% } %>
-                <form action="/verificarUsuario" method="POST">
+            <div>
+                <% if(typeof error != 'undefined'){ %>
+                    <h4><%= error %></h4>
+                <% } %> 
+            </div>
+                <form 
+                action="/verificarUsuario" 
+                method="POST">
                     <h1>Login Cliente</h1>
                     <label>Email:</label>
                     <input class="input-login" type="email" name="email" />
                     <label>Senha:</label>            
-                    <input class="input-login" type="password" name="senha" />
+                    <input class="input-login" type="password" name="password" />
                     <button id="btnEntrar" type="submit">Entrar</button>
                     <small>Esqueci minha senha</small>
                     <small>Não tem cadastro? <a id="click" href="/cadastro">Clique aqui</a></small>

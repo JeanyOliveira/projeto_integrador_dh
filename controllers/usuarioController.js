@@ -1,30 +1,81 @@
-const { listaDeUsuarios } = require("../models/usuariosModel");
+// const { listaDeUsuarios } = require("../models/usuariosModel");
+const { User } = require('../models')
 const usuarioModel = require("../models/usuariosModel");
 
 const usuarioController = {
   exibirLogin(req, res) {
     return res.render("login");
   },
+  async verificarUsuario(req, res) {    
+    try {
+      const { email, password } = req.body;
+      
+      const user = await User.findOne({
+        where: {
+          email
+        }
+      })
+      if(!user) {
+        return res.render('login', {
+          error: 'Usuário não existe!'})
+      }
+
+      if(user.password != password) {
+        return res.render('login', {
+          error: 'Senha está errada!'})
+      }
+
+      // DEU CERTO!
+      return res.redirect('/home');
+    } catch (error) {
+      console.log(error);
+      // PROBLEMA NO SERVER
+      return res.render('login', {
+        error: 'Sistema indisponivel, tente novamente!'})
+    };
+  },
+
   exibirCadastro(req, res) {
     return res.render("cadastro");
   },
-  salvarUsuario: (req, res) => {
-    const { nome, email, senha } = req.body;
-    usuarioModel.cadastrarUsuario(nome, email, senha);
-    return res.redirect("/login");
-  },
-  verificarUsuario: (req, res) => {
-    const { email, senha } = req.body
-    const usuario = usuarioModel.buscarUsuarioPorEmail(req.body.email);
+  async salvarUsuario(req, res) {
+    
+    try {
+      const { name, email, password } = req.body;
 
-
-    if(!usuario || usuario.senha != senha){
-      res.render('login', {
-        error:  'Usuario não existe ou a senha está errada!'
+      const user = await User.create({
+        name,
+        email,
+        password,
+        created_at: new Date().toDateString(),
+        updated_at: new Date().toDateString(),
       });
-    } 
-      res.redirect('/admin/produtosAdmin')
-  }
+      return res.redirect('/login');
+    } catch (err) {
+      console.log(err);
+      return res.redirect('/verificarUsuario');
+    }
+  },
+
+  // salvarUsuario: (req, res) => {
+  //   const { nome, email, senha } = req.body;
+  //   usuarioModel.cadastrarUsuario(nome, email, senha);
+  //   return res.redirect("/login");
+  // },
+  
+
+  // verificarUsuario: (req, res) => {
+  //   const { email, senha } = req.body
+  //   const usuario = usuarioModel.buscarUsuarioPorEmail(req.body.email);
+
+
+  //   if(!usuario || usuario.senha != senha){
+  //     res.render('login', {
+  //       error:  'Usuario não existe ou a senha está errada!'
+  //     });
+  //   } 
+  //     res.redirect('/admin/produtosAdmin')
+  // }
 };
 
 module.exports = usuarioController;
