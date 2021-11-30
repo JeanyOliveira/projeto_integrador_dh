@@ -23,8 +23,12 @@ module.exports = (conection, DataTypes) => {
       password: {
           type: DataTypes.STRING(256),
         },
+      type_user: {
+        type: DataTypes.STRING(50),
+        default: 'USER'
+      },
       created_at: {
-          type: DataTypes.DATE,
+          type: DataTypes.DATE,          
         },
       updated_at: {
           type: DataTypes.DATE

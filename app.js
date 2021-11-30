@@ -4,20 +4,25 @@ const methodOverride = require('method-override');
 
 const rotas = require('./routes');
 const rotasProdutos = require('./routes/produtos');
-const rotasDeUsuarios = require('./routes/rotasUsuarios')
+const rotasDeUsuarios = require('./routes/rotasUsuarios');
+
+const session = require('express-session');
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('views'));
-
 app.use(methodOverride('_method'));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 // app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join(__dirname, "public")));
+app.use(session({
+    secret: 'projeto-integrador',
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 app.use(rotas);
 app.use(rotasProdutos);

@@ -1,10 +1,10 @@
 // const { listaDeUsuarios } = require("../models/usuariosModel");
 const { User } = require('../models')
-const usuarioModel = require("../models/usuariosModel");
+// const usuarioModel = require("../models/usuariosModel");
 const bcrypt = require('bcryptjs');
 
 const usuarioController = {
-  exibirLogin(req, res) {
+  exibirLogin(req, res,) {
     return res.render("login");
   },
   async verificarUsuario(req, res) {    
@@ -24,6 +24,18 @@ const usuarioController = {
       if(!bcrypt.compareSync(password, user.password)) {
         return res.render('login', {
           error: 'Usuário ou senha estão incorretos!'})
+      }
+
+      Object.assign(req.session, {
+        user: {
+          id: user.id,
+          name: user.name,
+          type_user: user.type_user,
+        },
+      });
+
+      if(user.type_user === "ADMIN"){
+        return res.redirect('/admin')
       }
 
       // DEU CERTO!
@@ -56,6 +68,11 @@ const usuarioController = {
       console.log(err);
       return res.redirect('/verificarUsuario');
     }
+  },
+
+  logout(req, res) {
+    req.session.destroy();
+    return res.redirect('/login');
   },
 
   // salvarUsuario: (req, res) => {

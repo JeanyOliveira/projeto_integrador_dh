@@ -11,11 +11,13 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Sacramento&display=swap');
     </style>
-    <title>Home | PET IS LIFE</title>
+    <title>Home | PET IS LIFE - <%= user.name %></title>
 </head>
 
 <body>
     <%- include('components/header') %>
+
+    
     <main>
         <div>
             <% if(typeof error != 'undefined'){%>
