@@ -10,7 +10,8 @@ CREATE TABLE pet_is_life.user (
     image varchar(250),
 	password varchar(256),
 	created_at TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    type_user varchar(50), DEFAULT "USER"
 );
 
 CREATE TABLE pet_is_life.offers (

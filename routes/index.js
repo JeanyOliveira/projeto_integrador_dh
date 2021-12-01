@@ -8,8 +8,8 @@ const indexController = require('../controllers/indexController');
 const cadastarCategoriaController = require('../controllers/cadastrarCategoriaController');
 
 
-routes.get("/", isLogin, indexController.exibirHome);
-routes.get("/home", isLogin, indexController.exibirHome);
+routes.get("/", indexController.exibirHome);
+routes.get("/home", indexController.exibirHome);
 
 routes.get("/produto", indexController.exibirProduto);
 

@@ -14,13 +14,17 @@
                         <buttont class="button-header">Buscar</buttont>
                     </a>
                 </div>
-                <a href="/login">
-                    <button id="login-cadastro" class="button-header">Login</button>
-                </a>
+                
                 <a href="">
                     <img id="carrinho" src="/img/Icone-Carrinho.png" alt="carrinho">
                 </a>
-                <a href=""><b><%= user.name %> </b></a>
+
+                <% if(typeof user != 'undefined'){ %>
+                    <a href=""><b><%= user.name %> </b></a>
+                <% } else { %> 
+                    <a id="login-cadastro" class="button-header" href="/login"> Login </a>
+                <% } %> 
+                
                 <a href="/logout">Logout</a>
             </div>
         </section>
