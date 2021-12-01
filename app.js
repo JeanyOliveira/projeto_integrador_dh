@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const rotas = require('./routes');
 const rotasProdutos = require('./routes/produtos');
 const rotasDeUsuarios = require('./routes/rotasUsuarios');
+const sessionView = require('./middlewares/sessionView');
 
 const session = require('express-session');
 
@@ -24,6 +25,7 @@ app.use(session({
   })
 );
 
+app.use(sessionView);
 app.use(rotas);
 app.use(rotasProdutos);
 app.use(rotasDeUsuarios);
