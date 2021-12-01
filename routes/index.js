@@ -6,10 +6,11 @@ const routes = express.Router();
 
 const indexController = require('../controllers/indexController');
 const cadastarCategoriaController = require('../controllers/cadastrarCategoriaController');
+const deletarCategoria = require('../controllers/deletarCategoria');
 
 
-routes.get("/", isLogin, indexController.exibirHome);
-routes.get("/home", isLogin, indexController.exibirHome);
+routes.get("/",indexController.exibirHome);
+routes.get("/home", indexController.exibirHome);
 
 routes.get("/produto", indexController.exibirProduto);
 
@@ -27,9 +28,11 @@ routes.get("/admin", isLogin, indexController.exibirAdmin)
 
 routes.get("/admin/adminprodutos", isLogin, indexController.exibirAdminProdutos)
 
-routes.get("/admin/cadastrocategoria", isLogin, indexController.exibirCadastroCategoria)
+routes.get("/admin/cadastrocategoria", indexController.exibirCadastroCategoria)
 
-routes.post("/cadastarCategoria", isLogin, cadastarCategoriaController.category)
+routes.post("/cadastarCategoria", cadastarCategoriaController.category)
+
+routes.post("/deletarCategoria", deletarCategoria.deletar)
 
 routes.get("/admin/admincategorias", isLogin, indexController.exibirAdminCategorias)
 

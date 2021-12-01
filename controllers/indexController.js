@@ -1,7 +1,9 @@
+const {Category}= require("../models");
 
 
 const indexController = {
-    exibirHome: (req, res) => {
+
+    exibirHome: (req,res)=> {
         res.render('home');
     },
 
@@ -24,9 +26,18 @@ const indexController = {
     exibirLogin: (req, res) => {
         res.render('login');
     },
-    exibirCategoria: (req, res) => {
-        res.render('categoria');
-    },
+    async exibirCategoria(req, res) {
+            try{
+                const categorys = await Category.findAll({   
+                    model: Category,
+                })
+            
+                return res.render("categoria",{Category: categorys});
+            }catch(error){
+                console.log(error)
+            }
+        },
+
     exibirFinalizacaodecompra: (req, res) => {
         res.render('finalizacaodecompra');
     },

@@ -1,5 +1,5 @@
 module.exports=(conection, DataTypes)=>{
-    const category = conection.define(
+    const Category = conection.define(
         "Category",
         {
             id: {
@@ -17,5 +17,5 @@ module.exports=(conection, DataTypes)=>{
             timestamps: false,
         }
     )
-    return category;
+    return Category;
 }
