@@ -81,20 +81,6 @@ const produtoController = {
             return res.render("admin/editarProduto", {error: "Erro ao tentar editar produto.", produto: req.body})
         }
     },
-    async exibirProdutos(req, res){
-        try {
-            const listaDeProdutos = await Product.findAll();
-            console.log("lista aqui ", listaDeProdutos)
-            render('components/cards', { 'produtos': listaDeProdutos});
-
-            return res.render('produtos', {
-                produtos:listaDeProdutos
-            });   
-
-        } catch (error) {
-            return res.render("home", {error: "Erro ao carregar produtos"})
-        }
-    }
 };
 
 module.exports = produtoController;

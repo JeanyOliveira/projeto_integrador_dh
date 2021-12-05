@@ -1,5 +1,6 @@
 const { Product } = require('../models')
 const {Category}= require("../models");
+const { render } = require("ejs");
 
 const indexController = {
 
@@ -12,8 +13,20 @@ const indexController = {
         res.render('produto');
     },
 
-    exibirProdutos: (req, res) => {
-        res.render('produtos');
+    async exibirProdutos(req, res){
+        try {
+            const listaDeProdutos = await Product.findAll();
+            console.log("lista aqui ", listaDeProdutos)
+            render('components/cards', { produtos: listaDeProdutos});
+            
+            console.log("aquiiiii: ", listaDeProdutos)
+            return res.render('produtos', {
+                produtos:listaDeProdutos
+            });   
+
+        } catch (error) {
+            return res.render("home", {error: "Erro ao carregar produtos"})
+        }
     },
 
     exibirQuemsomos: (req, res) => {
