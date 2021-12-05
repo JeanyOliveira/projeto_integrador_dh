@@ -1,10 +1,11 @@
+const { Product } = require('../models')
 const {Category}= require("../models");
-
 
 const indexController = {
 
-    exibirHome: (req,res)=> {
-        res.render('home');
+    async exibirHome(req, res) {
+        let produtos = await Product.findAll() 
+        res.render('home', { "produtos": produtos});
     },
 
     exibirProduto: (req, res) => {
