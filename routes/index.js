@@ -7,6 +7,7 @@ const routes = express.Router();
 const indexController = require('../controllers/indexController');
 const cadastarCategoriaController = require('../controllers/cadastrarCategoriaController');
 const deletarCategoria = require('../controllers/deletarCategoria');
+const cartController = require('../controllers/cartController');
 
 
 routes.get("/",indexController.exibirHome);
@@ -18,7 +19,7 @@ routes.get("/produtos", indexController.exibirProdutos);
 
 routes.get("/quemsomos", indexController.exibirQuemsomos);
 
-routes.get("/carrinho", indexController.exibirCarrinho);
+routes.get("/carrinho",isLogin, indexController.exibirCarrinho);
 
 routes.get("/login", indexController.exibirLogin);
 
@@ -37,5 +38,8 @@ routes.post("/deletarCategoria", deletarCategoria.deletar)
 routes.get("/admin/admincategorias", isLogin, indexController.exibirAdminCategorias)
 
 routes.get("/finalizacaodecompra", isLogin, indexController.exibirFinalizacaodecompra);
+
+routes.post("/adicionarcarrinho", isLogin, cartController.cartController)
+
 
 module.exports = routes;

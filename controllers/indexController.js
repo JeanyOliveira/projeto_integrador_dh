@@ -1,5 +1,6 @@
 const { Product } = require('../models')
-const {Category}= require("../models");
+const { Category }= require("../models");
+const { Cart } = require("../models")
 const { render } = require("ejs");
 
 const indexController = {
@@ -33,10 +34,21 @@ const indexController = {
         res.render('quemsomos');
     },
 
-    exibirCarrinho: (req, res) => {
-        res.render('carrinho');
+     async exibirCarrinho (req, res) {
+         const {user} = req.session;
 
-    },
+            try {
+                const cart = await Cart.findAll({
+                    where: {
+                        userid: user.id,
+                    }
+                })
+            
+                return res.render("carrinho",{Cart: cart});
+            }catch(error){
+                console.log(error)
+            }
+        },
     exibirLogin: (req, res) => {
         res.render('login');
     },

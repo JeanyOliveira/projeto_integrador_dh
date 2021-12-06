@@ -1,13 +1,21 @@
 <div class="conteiner-cards">
     <% produtos.forEach(produto => {%> 
-        <div class="cards">
+        <form action="/adicionarcarrinho" method="post">
+            <div class="cards" name="produtoImg">
             <img src="/img/produtos/<%=produto.image%>" class="imgProdutos" alt="<%= produto.name %>">
             <div>
-                <h2 class="tituloCard"><%= produto.name%></h2>
-                <h5 class="precoCard">R$ 107,50</h5>
-                <h3 class="precoReal">R$ <%= produto.preco %></h3>
+                
+                <h2 class="tituloCard" name="produtoName"><%= produto.name%></h2>
+                <h5 class="precoCard" name="produtoCard">R$ 107,50</h5>
+                <h3 class="precoReal" name="produtoPreco">R$ <%= produto.preco %></h3>
                 <button class="btnCard">Comprar</button>
             </div>
+            
+            <input type="hidden" name="name" value=<%= produto.name%>>
+            <input type="hidden" name="preco" value=<%=produto.preco%>>
+            <button type="submit" class="btnCard">Adicionar ao carrinho</button>
+
+            </form>
         </div>
     <% }) %>
 </div>
