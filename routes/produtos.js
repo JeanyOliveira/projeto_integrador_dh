@@ -11,7 +11,6 @@ routes.delete('/deletar-produto/:id', isLogin, produtoController.deletarProduto)
 routes.get('/editar-produto/:id', isLogin, produtoController.editarProduto)
 routes.put('/salvar-edicao-produto/:id', isLogin, upload.single("image"), produtoController.salvarEdicao)
 
-
 routes.get('/produtoModels/:id', (req, res) =>{
     if(typeof Number(req.params.id) != "number") {
         return res.send('Deve digitar um numero');

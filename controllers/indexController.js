@@ -1,18 +1,32 @@
+const { Product } = require('../models')
 const {Category}= require("../models");
-
+const { render } = require("ejs");
 
 const indexController = {
 
-    exibirHome: (req,res)=> {
-        res.render('home');
+    async exibirHome(req, res) {
+        let produtos = await Product.findAll() 
+        res.render('home', { "produtos": produtos});
     },
 
     exibirProduto: (req, res) => {
         res.render('produto');
     },
 
-    exibirProdutos: (req, res) => {
-        res.render('produtos');
+    async exibirProdutos(req, res){
+        try {
+            const listaDeProdutos = await Product.findAll();
+            console.log("lista aqui ", listaDeProdutos)
+            render('components/cards', { produtos: listaDeProdutos});
+            
+            console.log("aquiiiii: ", listaDeProdutos)
+            return res.render('produtos', {
+                produtos:listaDeProdutos
+            });   
+
+        } catch (error) {
+            return res.render("home", {error: "Erro ao carregar produtos"})
+        }
     },
 
     exibirQuemsomos: (req, res) => {
