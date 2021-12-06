@@ -9,11 +9,7 @@ const cadastarCategoriaController = require('../controllers/cadastrarCategoriaCo
 const deletarCategoria = require('../controllers/deletarCategoria');
 
 
-<<<<<<< HEAD
 routes.get("/",indexController.exibirHome);
-=======
-routes.get("/", indexController.exibirHome);
->>>>>>> f6778ddb001a80bd98f5899cf3813c91c4d9848e
 routes.get("/home", indexController.exibirHome);
 
 routes.get("/produto", indexController.exibirProduto);
