@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/global.css" />
+        <link rel="stylesheet" href="/css/cadastro.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Sacramento&display=swap');
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <title>Painel de Usuário</title>
+    </head>
+    <body>
+
+        <%- include('components/header') %>        
+
+        <main class="container mt-4">
+            <div class="d-flex justify-content-between">
+                <h1>Painel de Usuário</h1>
+                <form action="/painelUser/search"  class="d-flex justify-content-around align-items-center" method="get">
+                    <input type="text" class="form-control" placeholder="Pesquise um usuário" name="key">
+                    <button type="submit" class="ml-3 btn btn-sucess">Buscar</button>
+                </form>
+            </div>
+    
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach(user => { %>
+                        <tr>
+                            <th scope="row"><%= user.id %></th>
+                            <th><%= user.name %></th>
+                            <th><%= user.email %></th>
+                            <th><a href="/painelUser/ver/<%= user.id %>" class="btn btn-primary">Ver dados</a></th>
+                            <th><a href="/painelUser/editar/<%= user.id %>" class="btn btn-warning">Editar</a></th>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </main>
+
+        <%- include('components/footer') %>
+    
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+</html> 

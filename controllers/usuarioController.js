@@ -2,6 +2,8 @@
 const { User } = require('../models')
 // const usuarioModel = require("../models/usuariosModel");
 const bcrypt = require('bcryptjs');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const usuarioController = {
   exibirLogin(req, res,) {
@@ -54,11 +56,14 @@ const usuarioController = {
   async salvarUsuario(req, res) {
     
     try {
-      const { name, email, password } = req.body;
+      const { name, email, password, rg, phone, image } = req.body;
 
       const user = await User.create({
         name,
         email,
+        rg, 
+        phone, 
+        image,
         password: bcrypt.hashSync(password, 10),
         created_at: new Date().toDateString(),
         updated_at: new Date().toDateString(),
@@ -70,10 +75,53 @@ const usuarioController = {
     }
   },
 
+  painelUser: async (req, res) => {
+    let users = await User.findAll();
+
+    return res.render('painelUser', {users})
+  },
+  findById: async (req, res) => {
+    let {id} = req.params;
+
+    let user = await User.findOne({
+      where:{
+        id: id
+      }
+    })
+
+    return res.render('viewUser', {user});
+  },
+  edit: async (req, res) => {
+    const {id} = req.params;
+
+    const usuario = User.findByPk(id);
+
+    return res.render('editarUsuario', {usuario})
+  },
+  update: async(req, res) => {
+    res.send('oi');
+  },
+  search: async(req, res) => {
+    let {key} = req.query;
+
+    let users = await User.findAll({
+      where:{
+        name:{
+          [Op.like]: `%${key}%`
+        }
+      },
+    });
+
+    return res.render('painelUser', {users})
+
+  },
+
   logout(req, res) {
     req.session.destroy();
     return res.redirect('/login');
   },
+  
+  
 
   // salvarUsuario: (req, res) => {
   //   const { nome, email, senha } = req.body;
