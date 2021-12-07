@@ -15,16 +15,14 @@
         <section class="carrinho">
             <h1><strong>Carrinho</strong></h1>
         </section>
-        <% Cart.forEach(cart => {%>
         <section class="produtos-carrinho">
-            
             <div class="produto">
                 <p>Produto</p>
                 <img id="img-produto" src="/img/Caminha fundo transparente.png" alt="caminha">
             </div>
             <div>
                 <p>Descrição</p>
-                <h2><%= cart.name%></h2>
+                <h2>Cama Confort - Animal Print</h2>
             </div>
             <div>
                 <p>quantidade</p>
@@ -32,11 +30,9 @@
             </div>
             <div>
                 <p>total</p>
-                <p>R$ <%= cart.preco%></p>
+                <p>R$ 202,00</p>
             </div>
-            
         </section>
-        <% }) %>
         <section class="frete-preco">
             <div class="frete">
                 <p>calcule frete e prazo:</p>
@@ -49,11 +45,10 @@
                 <p>frete grátis</p>
                 <div class="resumo-last">
                     <button id="button-resumo">Fechar Pedido</button>
-                    <p>R$ </p>
+                    <p>R$ 202,00</p>
                 </div>
             </div>           
         </section>
-        
     </main>
 
     <%- include('components/footer') %>

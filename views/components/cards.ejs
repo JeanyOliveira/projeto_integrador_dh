@@ -1,32 +1,15 @@
 <div class="conteiner-cards">
-    <div class="cards">
-        <img src="/img/Casaco_joaninha_-1-.webp" class="imgProdutos" alt="Casaco Joaninha">
-        <div>
-            <h2 class="tituloCard">Casaco Joaninha</h2>
-            <h5 class="precoCard">R$ 107,50</h5>
-            <h3 class="precoReal">R$ 75,20</h3>
-            <button class="btnCard">Comprar</button>
+    <% produtos.forEach(produto => {%> 
+        <div class="cards">
+            <form action="/produto/<%= produto.id %> " method="get">
+            <img src="/img/produtos/<%=produto.image%>" class="imgProdutos" alt="<%= produto.name %>">
+            <div>
+                <h2 class="tituloCard"><%= produto.name%></h2>
+                <h5 class="precoCard">R$ 107,50</h5>
+                <h3 class="precoReal">R$ <%= produto.preco %></h3>
+                <button class="btnCard">Comprar</button>
+            </div>
+        </form>
         </div>
-
-    </div>
-
-    <div class="cards">
-        <img src="/img/Manta.jpg" class="imgProdutos" alt="Manta">
-        <div>
-            <h2 class="tituloCard">Manta Polar</h1>
-            <h5 class="precoCard">R$ 59,90</h5>
-            <h3 class="precoReal">R$ 39,90</h3>
-            <button class="btnCard">Comprar</button>
-        </div>
-    </div>
-
-    <div class="cards">
-        <img src="/img/Banho-a-Seco-Beeps-200ml-3862436.webp" class="imgProdutos" alt="Shampoo banho a seco">
-        <div>
-            <h2 class="tituloCard">Banho a seco</h1>
-            <h5 class="precoCard">R$ 36,90</h5>
-            <h3 class="precoReal">R$ 33,20</h3>
-            <button class="btnCard">Comprar</button>
-        </div>
-    </div>
+    <% }) %>
 </div>

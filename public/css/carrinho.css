@@ -15,7 +15,7 @@ section.carrinho h1 {
 
 section.produtos-carrinho {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 100px 200px;
     align-items: center;
 }

@@ -8,12 +8,24 @@ const cadastarCategoriaController={
             const category = await Category.create({
                 name
             })
+            
             res.redirect("/admin/cadastroCategoria")
+            
         }catch(err){
             console.log(err)
             return res.redirect
         }
     }
-}
 
-module.exports = cadastarCategoriaController;
+}
+const deletarCategoria={
+    async deletar(req,res) {
+        const {name} = req.body;
+        Category.destroy({ where: { name }});
+       }
+}
+   
+    
+
+
+module.exports = cadastarCategoriaController, deletarCategoria;

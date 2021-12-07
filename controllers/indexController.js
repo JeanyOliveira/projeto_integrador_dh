@@ -1,32 +1,75 @@
-
+const { Product } = require('../models')
+const { Category }= require("../models");
+const { Cart } = require("../models")
+const { render } = require("ejs");
 
 const indexController = {
-    exibirHome: (req, res) => {
-        res.render('home');
+
+    async exibirHome(req, res) {
+        let produtos = await Product.findAll() 
+        res.render('home', { "produtos": produtos});
     },
 
-    exibirProduto: (req, res) => {
-        res.render('produto');
+    async exibirProduto(req, res) {
+        try {
+            let produto = await Product.findByPk(req.params.id)
+
+            if (produto == null)
+                return res.render("home", { error: "Produto não encontrado." })
+            return res.render('produto', { 'produto': produto});
+        } catch (error) {
+            res.redirect("/home")
+        }
     },
 
-    exibirProdutos: (req, res) => {
-        res.render('produtos');
+    async exibirProdutos(req, res){
+        try {
+            const listaDeProdutos = await Product.findAll();
+            render('components/cards', { produtos: listaDeProdutos});
+            
+            return res.render('produtos', {
+                produtos:listaDeProdutos
+            });   
+
+        } catch (error) {
+            return res.render("home", {error: "Erro ao carregar produtos"})
+        }
     },
 
     exibirQuemsomos: (req, res) => {
         res.render('quemsomos');
     },
 
-    exibirCarrinho: (req, res) => {
-        res.render('carrinho');
+     async exibirCarrinho (req, res) {
+         const {user} = req.session;
 
-    },
+            try {
+                const cart = await Cart.findAll({
+                    where: {
+                        userid: user.id,
+                    }
+                })
+            
+                return res.render("carrinho",{Cart: cart});
+            }catch(error){
+                console.log(error)
+            }
+        },
     exibirLogin: (req, res) => {
         res.render('login');
     },
-    exibirCategoria: (req, res) => {
-        res.render('categoria');
-    },
+    async exibirCategoria(req, res) {
+            try{
+                const categorys = await Category.findAll({   
+                    model: Category,
+                })
+            
+                return res.render("categoria",{Category: categorys});
+            }catch(error){
+                console.log(error)
+            }
+        },
+
     exibirFinalizacaodecompra: (req, res) => {
         res.render('finalizacaodecompra');
     },

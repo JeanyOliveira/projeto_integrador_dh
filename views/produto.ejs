@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/produto.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    
+
     <title>Produto interno | PET IS LIFE</title>
 </head>
 
@@ -17,11 +17,11 @@
 
     <main class="produto">
         <section class="produto-preco">        
-            <img src="/img/Caminha fundo transparente.png" alt="">            
+            <img src="/img/produtos/<%=produto.image%>" alt=<%=produto.name%> >            
             <div class="preco">
-                <h2>Cama Confort - Animal Print</h2>
+                <h2><%=produto.name%></h2>
                 <small>R$ 184,21</small>
-                <p>R$ 101,00</p>
+                <p>R$ <%=produto.preco%></p>
                 <button class="b-comprar">Comprar</button>
             </div>      
         </section>
