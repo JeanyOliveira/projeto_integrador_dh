@@ -17,11 +17,11 @@
 
     <main class="produto">
         <section class="produto-preco">        
-            <img src="/img/Caminha fundo transparente.png" alt="">            
+            <img src="/img/produtos/<%=produto.image%>" alt=<%=produto.name%> >            
             <div class="preco">
-                <h2>Cama Confort - Animal Print</h2>
+                <h2><%=produto.name%></h2>
                 <small>R$ 184,21</small>
-                <p>R$ 101,00</p>
+                <p>R$ <%=produto.preco%></p>
                 <button class="b-comprar">Comprar</button>
             </div>      
         </section>

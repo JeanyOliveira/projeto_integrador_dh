@@ -10,17 +10,23 @@ const indexController = {
         res.render('home', { "produtos": produtos});
     },
 
-    exibirProduto: (req, res) => {
-        res.render('produto');
+    async exibirProduto(req, res) {
+        try {
+            let produto = await Product.findByPk(req.params.id)
+
+            if (produto == null)
+                return res.render("home", { error: "Produto não encontrado." })
+            return res.render('produto', { 'produto': produto});
+        } catch (error) {
+            res.redirect("/home")
+        }
     },
 
     async exibirProdutos(req, res){
         try {
             const listaDeProdutos = await Product.findAll();
-            console.log("lista aqui ", listaDeProdutos)
             render('components/cards', { produtos: listaDeProdutos});
             
-            console.log("aquiiiii: ", listaDeProdutos)
             return res.render('produtos', {
                 produtos:listaDeProdutos
             });   

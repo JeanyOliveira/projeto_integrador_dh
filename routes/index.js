@@ -13,7 +13,7 @@ const cartController = require('../controllers/cartController');
 routes.get("/",indexController.exibirHome);
 routes.get("/home", indexController.exibirHome);
 
-routes.get("/produto", indexController.exibirProduto);
+routes.get("/produto/:id", indexController.exibirProduto);
 
 routes.get("/produtos", indexController.exibirProdutos);
 

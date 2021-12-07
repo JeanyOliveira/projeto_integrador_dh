@@ -30,7 +30,6 @@ const produtoController = {
 
             return res.redirect("admin/produtosAdmin");
         } catch (error) {
-            console.log("aqui")
             return res.render("admin/cadastroProduto", {error: "Erro ao cadastrar produto."})
         }
     },
