@@ -40,6 +40,10 @@ const indexController = {
         res.render('quemsomos');
     },
 
+    exibirOfertas:(req,res) =>{
+        res.render('ofertas')
+    },
+
      async exibirCarrinho (req, res) {
          const {user} = req.session;
 

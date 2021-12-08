@@ -3,7 +3,7 @@ const { Cart } = require("../models");
 const cartController={
     async cartController(req,res){
         try{
-            const {name, preco} = Cart;
+            const { name, preco} = req.body;
             const { user } = req.session;
 
             const cartController = await Cart.create({
@@ -12,7 +12,7 @@ const cartController={
                 userid: user.id
             })
             
-            res.redirect("/home")
+            res.redirect("/carrinho")
             
         }catch(err){
             console.log(err)
@@ -20,6 +20,18 @@ const cartController={
         }
     },
 
+    destroy: async(req, res)=>{
+        const {user} = req.session;
+        const {id} = req.params;
+
+        const resultado = await Cart.destroy({
+            where:{
+                userid: user.id,
+                id
+            }
+        })
+        res.redirect("/carrinho")
+    }
 }
 
 module.exports = cartController;

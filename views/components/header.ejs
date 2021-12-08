@@ -23,11 +23,12 @@
 
                 <% if(typeof user != 'undefined'){ %>
                     <a href="/painelUser/ver/<%= user.id %>" class="btn btn-primary"><%= user.name %> </a>
+                    <a href="/logout">Logout</a>
                 <% } else { %> 
                     <a id="login-cadastro" class="button-header" href="/login"> Login </a>
                 <% } %> 
                 
-                <a href="/logout">Logout</a>
+                
             </div>
         </section>
         <section class="header2 text-primary">

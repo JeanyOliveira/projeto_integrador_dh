@@ -63,7 +63,6 @@ const usuarioController = {
         email,
         rg, 
         phone, 
-        image,
         password: bcrypt.hashSync(password, 10),
         created_at: new Date().toDateString(),
         updated_at: new Date().toDateString(),

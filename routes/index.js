@@ -14,6 +14,8 @@ const cartController = require('../controllers/cartController');
 routes.get("/",indexController.exibirHome);
 routes.get("/home", indexController.exibirHome);
 
+routes.get("/ofertas", indexController.exibirOfertas);
+
 routes.get("/produto/:id", indexController.exibirProduto);
 
 routes.get("/quemsomos", indexController.exibirQuemsomos);
@@ -39,6 +41,6 @@ routes.get("/admin/admincategorias", isAdmin, indexController.exibirAdminCategor
 routes.get("/finalizacaodecompra", isLogin, indexController.exibirFinalizacaodecompra);
 
 routes.post("/adicionarcarrinho", isLogin, cartController.cartController)
-
+routes.delete('/deletar/:id', cartController.destroy)
 
 module.exports = routes;

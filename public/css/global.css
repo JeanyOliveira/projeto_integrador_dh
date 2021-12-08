@@ -173,6 +173,7 @@ footer {
 
 .btnCard {
   position: inherit;
+  margin-top: 55px;
   background-color: #7728ab;
   padding: 10px;
   border-radius: 10px;

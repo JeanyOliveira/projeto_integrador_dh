@@ -18,7 +18,8 @@ module.exports=(conection, DataTypes)=>{
             userid:
             {
                 type:DataTypes.INTEGER
-            }
+            },
+
         },
         {
             tableName: "cart",
@@ -31,9 +32,8 @@ module.exports=(conection, DataTypes)=>{
         Cart.belongsTo(models.User,{
             foreignKey:"userid"
         });
-        Cart.belongsTo(models.User, {
-            foreignKey: "userid",
-          });
+        
+        
     }
     return Cart;
 }

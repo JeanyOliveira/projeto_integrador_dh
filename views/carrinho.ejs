@@ -20,19 +20,21 @@
             
             <div class="produto">
                 <p>Produto</p>
-                <img id="img-produto" src="/img/Caminha fundo transparente.png" alt="caminha">
+                <img id="img-produto" src="<%= %>>" alt="caminha">
             </div>
             <div>
                 <p>Descrição</p>
                 <h2><%= cart.name%></h2>
             </div>
             <div>
-                <p>quantidade</p>
-                <p>2</p>
+                
             </div>
             <div>
                 <p>total</p>
                 <p>R$ <%= cart.preco%></p>
+                <form action="/deletar/<%= cart.id%>?_method=DELETE" method="post">
+                    <button type="submit" id="button-resumo">Remover do Carrinho</button>
+                </form>
             </div>
             
         </section>
