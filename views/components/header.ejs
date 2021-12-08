@@ -9,10 +9,8 @@
             </a>     
             <div class="input-busca">
                 <div class="buscar">
-                    <input type="text">
-                    <a href="">
-                        <buttont class="button-header">Buscar</buttont>
-                    </a>
+                    <input class="input-filter" type="text" placeholder="Filtrar produtos">
+                    <button class="button-header">Filtrar</button>
                 </div>
                 
                 <a href="/carrinho">
@@ -22,6 +20,7 @@
                 <a href=""><b></b> </a>
 
                 <% if(typeof user != 'undefined'){ %>
+<<<<<<< HEAD
                     <a href="/painelUser/ver/<%= user.id %>" class="btn btn-primary"><%= user.name %> </a>
                     <a href="/logout">Logout</a>
                 <% } else { %> 
@@ -29,6 +28,14 @@
                 <% } %> 
                 
                 
+=======
+                    <a href=""><b><%= user.name %> </b></a>
+                <% } else { %> 
+                    <a id="login-cadastro" class="button-header" href="/login"> Login </a>
+                <% } %> 
+
+                <a href="/logout">Logout</a>
+>>>>>>> 00a0e384666a2fdafc6b01b0c8979fcaea60d587
             </div>
         </section>
         <section class="header2 text-primary">
