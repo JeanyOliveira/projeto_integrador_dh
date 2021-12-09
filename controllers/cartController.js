@@ -1,14 +1,16 @@
 const { Cart } = require("../models");
 
 const cartController={
+
     async cartController(req,res){
         try{
-            const { name, preco} = req.body;
+            const { name, preco, cartimage} = req.body;
             const { user } = req.session;
 
             const cartController = await Cart.create({
                 name,
                 preco,
+                cartimage,
                 userid: user.id
             })
             

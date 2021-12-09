@@ -19,6 +19,10 @@ module.exports=(conection, DataTypes)=>{
             {
                 type:DataTypes.INTEGER
             },
+            cartimage:
+            {
+                type:DataTypes.STRING
+            },
 
         },
         {

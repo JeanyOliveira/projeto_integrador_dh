@@ -1,26 +1,23 @@
 <div class="conteiner-cards">
-    <% produtos.forEach(produto => {%> 
-        <form action="/adicionarcarrinho" method="post">
-            <div class="cards" name="produtoImg">
-        <div class="cards">
-            <form action="/produto/<%= produto.id %> " method="get">
-            <img src="/img/produtos/<%=produto.image%>" class="imgProdutos" alt="<%= produto.name %>">
+    <% produtos.forEach(produto => {%>
+
+    <div class="cards">
+        <form action="/produto/<%= produto.id %> " method="get">
+            <img src="/img/produtos/<%=produto.image%>" name="image" class="imgProdutos" alt="<%= produto.name %>">
             <div>
                 <h2 class="tituloCard" name="produtoName"><%= produto.name%></h2>
                 <h5 class="precoCard" name="produtoCard">R$ 107,50</h5>
                 <h3 class="precoReal" name="produtoPreco">R$ <%= produto.preco %></h3>
                 <button class="btnCard">Comprar</button>
-                <input type="hidden" name="name" value=<%= produto.name%>>
-                <input type="hidden" name="preco" value=<%=produto.preco%>>
-                <button type="submit" class="btnCard">Adicionar ao carrinho</button>
-            </form>
-            </form>
-            </div>
-        </div>
-    <% }) %>
-<<<<<<< HEAD
-</div> 
-=======
+        </form>
+        <form action="/adicionarcarrinho" method="post">
+            <input type="hidden" name="name" value=<%= produto.name%>>
+            <input type="hidden" name="preco" value=<%=produto.preco%>>
+            <input type="hidden" name="cartimage" value="<%=produto.image%>">
+            <button class="btnCard">Adicionar ao carrinho</button>
+        </form>
+        
+    </div>
+    <% }) %> 
     <script src="/js/filter.js"></script>
 </div>
->>>>>>> 00a0e384666a2fdafc6b01b0c8979fcaea60d587

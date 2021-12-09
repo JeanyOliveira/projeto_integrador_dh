@@ -46,8 +46,9 @@ main {
 }
 
 #tituloMarca {
-  margin-left: 11%;
+  margin-left: 220px;
   text-align: left;
+  font-size: 18px;
 }
 
 .marcasLinha1 img {
@@ -73,6 +74,10 @@ main {
 
 .blog img {
   width: 20vw;
+}
+
+#cardsHome{
+  background: lawngreen;
 }
 
 

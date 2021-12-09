@@ -125,10 +125,11 @@ footer {
 
 .conteiner-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-left: 60px;
   flex-wrap: wrap;
+  flex-direction: row;
   text-align: center;
 }
 .cards:hover {
@@ -174,7 +175,6 @@ footer {
 
 .btnCard {
   position: inherit;
-  margin-top: 55px;
   background-color: #7728ab;
   padding: 10px;
   border-radius: 10px;
